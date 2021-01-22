@@ -1,6 +1,8 @@
 import React from 'react'
 import { StatusBar } from 'expo-status-bar'
 import Svg, { Circle, Rect, Path } from 'react-native-svg';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import { Button } from '../../components/Button'
 import { BackgroundImage, InputField, PageTitle } from '../../styles/global'
@@ -9,7 +11,7 @@ import { ForgotPass } from './styles'
 import backgroundLogin from '../../assets/backgroundLogin.png'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-export default function App() {
+export default function App(props) {
   return (
     <BackgroundImage source={ backgroundLogin }>
       <Svg width="315" height="27" viewBox="0 0 315 27" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -21,7 +23,7 @@ export default function App() {
       <TouchableOpacity>
         <ForgotPass color="white">Esqueceu a senha</ForgotPass>
       </TouchableOpacity>
-      <Button color="#08AF24">Entrar</Button>
+      <Button color="#08AF24" onPress={() => props.navigation.navigate('Menu')}>Entrar</Button>
       <StatusBar style="light" />
     </BackgroundImage>
   )
