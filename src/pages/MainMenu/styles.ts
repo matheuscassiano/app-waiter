@@ -1,9 +1,11 @@
 
 import styled from 'styled-components/native'
 
+const width = window.innerWidth
+
 export const MenuButton = styled.TouchableOpacity`
-    width: 155px;
-    height: 155px;
+    width: ${width * .4}px;
+    height: ${width * .4}px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,4 +21,11 @@ export const MenuContainer = styled.View`
     gap: 20px;
     grid-template-columns: 1fr 1fr;
     margin-top: 40px;
+`
+
+export const Icon = styled.Image`
+    width: 60%;
+    height: 50%;
+    margin-bottom: 10px;
+    resize-mode: contain;
 `

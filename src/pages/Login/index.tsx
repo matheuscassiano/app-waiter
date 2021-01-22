@@ -1,10 +1,11 @@
 import React from 'react'
 import { StatusBar } from 'expo-status-bar'
-import Svg, { Circle, Rect, Path } from 'react-native-svg';
+import Svg, { Path } from 'react-native-svg';
 
 import { Button } from '../../components/Button'
-import { BackgroundImage, InputField, PageTitle } from '../../styles/global'
+import { BackgroundImage, InputField } from '../../styles/global'
 import { ForgotPass } from './styles'
+
 
 import backgroundLogin from '../../assets/backgroundLogin.png'
 import { TouchableOpacity } from 'react-native-gesture-handler';
