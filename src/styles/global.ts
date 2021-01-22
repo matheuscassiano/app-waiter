@@ -3,7 +3,7 @@ import { StatusBar } from 'react-native';
 
 const StatusHeight = StatusBar.currentHeight as number
 
-export const Background = styled.View`
+export const BackgroundImage = styled.ImageBackground`
     height: 100%;
     display: flex;
     align-items: center;
