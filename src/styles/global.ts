@@ -16,6 +16,7 @@ export const PageTitle = styled.Text`
     font-size: 25px;
     font-weight: normal;
     text-align: center;
+    color: ${props => props.color};
     margin-top: ${StatusHeight + 20}px;
 `
 

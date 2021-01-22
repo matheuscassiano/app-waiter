@@ -1,20 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { Text, View } from 'react-native';
-import Button from '../../components/Button';
-import { BackgroundImage, InputField, PageTitle } from '../../styles/global';
+import React from 'react'
+import { StatusBar } from 'expo-status-bar'
+
+import { Button } from '../../components/Button'
+import { BackgroundImage, InputField, PageTitle } from '../../styles/global'
+import { ForgotPass } from './styles'
 
 import backgroundLogin from '../../assets/backgroundLogin.png'
 
 export default function App() {
   return (
     <BackgroundImage source={ backgroundLogin }>
-      <PageTitle>Login</PageTitle>
+      <PageTitle color="white">Login</PageTitle>
       <InputField placeholder="Usuário" />
       <InputField placeholder="Senha" secureTextEntry={true} />
-      <Text>Esqueceu a senha</Text>
-      <Button>test</Button>
-      <StatusBar style="auto" />
+      <ForgotPass color="white">Esqueceu a senha</ForgotPass>
+      <Button color="#08AF24">Entrar</Button>
+      <StatusBar style="light" />
     </BackgroundImage>
-  );
+  )
 }

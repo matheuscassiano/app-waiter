@@ -10,10 +10,12 @@ export const ButtonContainer = styled.TouchableOpacity`
     padding-right: 16px;
     padding-left: 16px;
     border-radius: 16px;
-    background-color: green;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    background-color: ${props => props.color};
+    box-shadow: 0px 0px 4px ${props => props.color}80;
 `
 
 export const InnerText = styled.Text`
     color: white;
+    font-size: 16px;
+    font-weight: bold;
 `
