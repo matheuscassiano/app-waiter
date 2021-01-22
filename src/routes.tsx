@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 const AppStack = createStackNavigator()
 
 import Login from './pages/Login'
+import MainMenu from './pages/MainMenu'
 import Menu from './pages/Menu'
 
 export default function Routes() {
@@ -12,6 +13,7 @@ export default function Routes() {
         <NavigationContainer>
             <AppStack.Navigator screenOptions={{ headerShown: false }}>
                 <AppStack.Screen name="Login" component={Login} />
+                <AppStack.Screen name="MainMenu" component={MainMenu} />
                 <AppStack.Screen name="Menu" component={Menu} />
             </AppStack.Navigator>
         </NavigationContainer>
