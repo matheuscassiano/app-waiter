@@ -73,7 +73,7 @@ export default function App() {
             <Text><MinPrice>R$ 50.00</MinPrice> <MinSubPrice>R$ 66.00</MinSubPrice></Text>
           </View>
           <View>
-            <LargeImage source={FoodeOne} />
+            <LargeImage source={FoodeTwo} />
             <Text>Picanha na Chapa com Fritas</Text>
             <Text><MinPrice>R$ 50.00</MinPrice> <MinSubPrice>R$ 66.00</MinSubPrice></Text>
           </View>
@@ -83,7 +83,7 @@ export default function App() {
             <Text><MinPrice>R$ 50.00</MinPrice> <MinSubPrice>R$ 66.00</MinSubPrice></Text>
           </View>
           <View>
-            <LargeImage source={FoodeOne} />
+            <LargeImage source={FoodeTwo} />
             <Text>Picanha na Chapa com Fritas</Text>
             <Text><MinPrice>R$ 50.00</MinPrice> <MinSubPrice>R$ 66.00</MinSubPrice></Text>
           </View>

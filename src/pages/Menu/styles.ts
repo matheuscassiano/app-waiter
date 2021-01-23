@@ -41,9 +41,10 @@ export const CategoryItem = styled.View`
 `
 
 export const SwipeMenu = styled(ScrollView)`
-    width: ${windowWidth - 32}px;
+    width: 100%;
     height: 80px;
-    margin: 20px 0 0 32px;
+    margin-top: 5px;
+    padding-left: 32px;
 `
 
 export const Icon = styled.Image`

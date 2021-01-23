@@ -61,7 +61,7 @@ export const MinPrice = styled.Text`
     font-size: 13px;
     font-weight: 700;
     text-align: center;
-    margin-right: 10px;
+    padding-right: 20px;
 `
 
 export const MinSubPrice = styled.Text`
