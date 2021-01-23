@@ -1,17 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, Image } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
 import { PageTitle, Price, LineBreak, MinPrice, MinSubPrice } from '../../styles/global';
 import { 
   Background, MenuHeader, CategoryItem, 
   SwipeMenu, Search, SubTitle, LargeImage,
-  SwipeProm } from './styles'
+  SwipeProm, Icon } from './styles'
 
 import FoodeOne from '../../assets/food01.png'
 import FoodeTwo from '../../assets/food02.png'
 import Beer from '../../assets/beer.png'
+import BeerIcon from '../../assets/beerIcon.png'
 import { ItemCard, Content, RoundedImage, ItemTitle } from '../../components/ItemList';
 
 export default function App() {
@@ -24,30 +25,39 @@ export default function App() {
             horizontal={true} 
             showsHorizontalScrollIndicator={false}>
             <CategoryItem>
+              <Icon source={BeerIcon} />
               <Text>Categoria</Text>
             </CategoryItem>
             <CategoryItem>
+              <Icon source={BeerIcon} />
               <Text>Categoria</Text>
             </CategoryItem>
             <CategoryItem>
+              <Icon source={BeerIcon} />
               <Text>Categoria</Text>
             </CategoryItem>
             <CategoryItem>
+              <Icon source={BeerIcon} />
               <Text>Categoria</Text>
             </CategoryItem>
             <CategoryItem>
+              <Icon source={BeerIcon} />
               <Text>Categoria</Text>
             </CategoryItem>
             <CategoryItem>
+              <Icon source={BeerIcon} />
               <Text>Categoria</Text>
             </CategoryItem>
             <CategoryItem>
+              <Icon source={BeerIcon} />
               <Text>Categoria</Text>
             </CategoryItem>
             <CategoryItem>
+              <Icon source={BeerIcon} />
               <Text>Categoria</Text>
             </CategoryItem>
             <CategoryItem>
+              <Icon source={BeerIcon} />
               <Text>Categoria</Text>
             </CategoryItem>
           </SwipeMenu>

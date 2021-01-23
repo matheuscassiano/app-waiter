@@ -45,9 +45,9 @@ export const InputField = styled.TextInput`
     padding-right: 16px;
     padding-left: 16px;
     background-color: white;
-    elevation: 4;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
     border-radius: 16px;
+    elevation: 4;
 `
 export const Price = styled.Text`
     color: #608F5F;

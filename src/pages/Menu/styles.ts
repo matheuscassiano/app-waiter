@@ -46,6 +46,12 @@ export const SwipeMenu = styled(ScrollView)`
     margin: 20px 0 0 32px;
 `
 
+export const Icon = styled.Image`
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+`
+
 export const SubTitle = styled.Text`
     width: 100%;
     font-size: 30px;
