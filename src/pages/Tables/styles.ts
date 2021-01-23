@@ -14,5 +14,12 @@ export const TopBar = styled.View`
 
 export const Search = styled(InputField)`
     width: ${windowWidth - 120}px;
-    align-self: flex-end;
+`
+
+export const TableContainer = styled.View`
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
 `
