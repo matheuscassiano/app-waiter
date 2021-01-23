@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { useState } from 'react';
 import { Text, View, Image } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
@@ -17,6 +17,8 @@ import { ItemCard, Content, RoundedImage, ItemTitle } from '../../components/Ite
 import { Modal } from '../../components/Modal';
 
 export default function App() {
+  const [activeModalItem, setActiveModalItem] = useState(true)
+
   return (
     <>
       <Background>
@@ -205,7 +207,7 @@ export default function App() {
         </ScrollView>
         <StatusBar style="auto" />
       </Background>
-      <Modal><Text>Test</Text></Modal>
+      <Modal active={activeModalItem} setActive={setActiveModalItem}><Text>Test</Text></Modal>
     </>
   );
 }

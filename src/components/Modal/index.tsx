@@ -3,7 +3,13 @@ import { ModalContainer, ModalContent, ModalHeader, Close } from './styles';
 
 import ArrowDown from '../../assets/arrow-down.svg'
 
-export function Modal({ children }){
+interface ModalInterface {
+  children: Element; 
+  active: Boolean; 
+  setActive: Function;
+}
+
+export const Modal = (props: ModalInterface) => {
   return (
   <ModalContainer>
     <ModalContent>
@@ -12,7 +18,7 @@ export function Modal({ children }){
           <ArrowDown />
         </Close>
       </ModalHeader>
-      {children}
+      {props.children}
     </ModalContent>
   </ModalContainer>
 )};
