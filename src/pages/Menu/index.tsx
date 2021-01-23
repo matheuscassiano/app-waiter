@@ -11,8 +11,11 @@ import {
 
 import FoodeOne from '../../assets/food01.png'
 import FoodeTwo from '../../assets/food02.png'
+import FoodeThree from '../../assets/food03.png'
 import Beer from '../../assets/beer.png'
 import BeerIcon from '../../assets/beerIcon.png'
+
+
 import { ItemCard, Content, RoundedImage, ItemTitle } from '../../components/ItemList';
 import { Modal } from '../../components/Modal';
 
@@ -207,8 +210,9 @@ export default function App() {
         </ScrollView>
         <StatusBar style="auto" />
       </Background>
-      <Modal active={activeModalItem} setActive={setActiveModalItem}>
-        <Text>Test</Text>
+      <Modal active={activeModalItem} setActive={setActiveModalItem} cover={FoodeThree}>
+        <Text>Picanha na Chapa com Fritas</Text>
+        <Text>Medalhão de picanha feiro na  chapa com manteiga de garrafa</Text>
       </Modal>
     </>
   );
