@@ -4,17 +4,17 @@ import { ModalContainer, ModalContent, ModalHeader, Close } from './styles';
 import ArrowDown from '../../assets/arrow-down.svg'
 
 interface ModalInterface {
-  children: Element; 
+  children: any; 
   active: Boolean; 
   setActive: Function;
 }
 
 export const Modal = (props: ModalInterface) => {
   return (
-  <ModalContainer>
+  <ModalContainer show={props.active}>
     <ModalContent>
       <ModalHeader>
-        <Close>
+        <Close onPress={() => props.setActive(false)}>
           <ArrowDown />
         </Close>
       </ModalHeader>

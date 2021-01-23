@@ -17,7 +17,7 @@ import { ItemCard, Content, RoundedImage, ItemTitle } from '../../components/Ite
 import { Modal } from '../../components/Modal';
 
 export default function App() {
-  const [activeModalItem, setActiveModalItem] = useState(true)
+  const [activeModalItem, setActiveModalItem] = useState(false)
 
   return (
     <>
@@ -100,7 +100,7 @@ export default function App() {
           <LineBreak />
           <SubTitle>Cervejas</SubTitle>
           <View>
-          <ItemCard>
+          <ItemCard onPress={() => setActiveModalItem(true)}>
             <Content>
               <RoundedImage source={Beer} />
               <View>
@@ -207,7 +207,9 @@ export default function App() {
         </ScrollView>
         <StatusBar style="auto" />
       </Background>
-      <Modal active={activeModalItem} setActive={setActiveModalItem}><Text>Test</Text></Modal>
+      <Modal active={activeModalItem} setActive={setActiveModalItem}>
+        <Text>Test</Text>
+      </Modal>
     </>
   );
 }
