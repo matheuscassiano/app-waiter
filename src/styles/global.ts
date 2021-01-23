@@ -39,3 +39,9 @@ export const InputField = styled.TextInput`
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
     border-radius: 16px;
 `
+export const Price = styled.Text`
+    font-size: 18px;
+    font-weight: 700;
+    color: #608F5F;
+    text-align: center;
+`

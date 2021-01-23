@@ -3,7 +3,7 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
-import { PageTitle } from '../../styles/global';
+import { PageTitle, Price } from '../../styles/global';
 import { 
   Background, MenuHeader, CategoryItem, 
   SwipeMenu, Search, SubTitle, LargeImage,
@@ -93,9 +93,101 @@ export default function App() {
               <Text>Bebida - 600ml</Text>
             </View>
           </Content>
-          <Text>Nome</Text>
+          <Price>R$ 9.00</Price>
         </ItemCard>
-          
+        <ItemCard>
+          <Content>
+            <RoundedImage source={Beer} />
+            <View>
+              <ItemTitle>Skol - Cerveja Skol Pilsen</ItemTitle>
+              <Text>Bebida - 600ml</Text>
+            </View>
+          </Content>
+          <Price>R$ 9.00</Price>
+        </ItemCard>
+        <ItemCard>
+          <Content>
+            <RoundedImage source={Beer} />
+            <View>
+              <ItemTitle>Skol - Cerveja Skol Pilsen</ItemTitle>
+              <Text>Bebida - 600ml</Text>
+            </View>
+          </Content>
+          <Price>R$ 9.00</Price>
+        </ItemCard>
+        <ItemCard>
+          <Content>
+            <RoundedImage source={Beer} />
+            <View>
+              <ItemTitle>Skol - Cerveja Skol Pilsen</ItemTitle>
+              <Text>Bebida - 600ml</Text>
+            </View>
+          </Content>
+          <Price>R$ 9.00</Price>
+        </ItemCard>
+        <ItemCard>
+          <Content>
+            <RoundedImage source={Beer} />
+            <View>
+              <ItemTitle>Skol - Cerveja Skol Pilsen</ItemTitle>
+              <Text>Bebida - 600ml</Text>
+            </View>
+          </Content>
+          <Price>R$ 9.00</Price>
+        </ItemCard>
+        </View>
+        <SubTitle>Cervejas</SubTitle>
+        <View>
+        <ItemCard>
+          <Content>
+            <RoundedImage source={Beer} />
+            <View>
+              <ItemTitle>Skol - Cerveja Skol Pilsen</ItemTitle>
+              <Text>Bebida - 600ml</Text>
+            </View>
+          </Content>
+          <Price>R$ 9.00</Price>
+        </ItemCard>
+        <ItemCard>
+          <Content>
+            <RoundedImage source={Beer} />
+            <View>
+              <ItemTitle>Skol - Cerveja Skol Pilsen</ItemTitle>
+              <Text>Bebida - 600ml</Text>
+            </View>
+          </Content>
+          <Price>R$ 9.00</Price>
+        </ItemCard>
+        <ItemCard>
+          <Content>
+            <RoundedImage source={Beer} />
+            <View>
+              <ItemTitle>Skol - Cerveja Skol Pilsen</ItemTitle>
+              <Text>Bebida - 600ml</Text>
+            </View>
+          </Content>
+          <Price>R$ 9.00</Price>
+        </ItemCard>
+        <ItemCard>
+          <Content>
+            <RoundedImage source={Beer} />
+            <View>
+              <ItemTitle>Skol - Cerveja Skol Pilsen</ItemTitle>
+              <Text>Bebida - 600ml</Text>
+            </View>
+          </Content>
+          <Price>R$ 9.00</Price>
+        </ItemCard>
+        <ItemCard>
+          <Content>
+            <RoundedImage source={Beer} />
+            <View>
+              <ItemTitle>Skol - Cerveja Skol Pilsen</ItemTitle>
+              <Text>Bebida - 600ml</Text>
+            </View>
+          </Content>
+          <Price>R$ 9.00</Price>
+        </ItemCard>
         </View>
       </ScrollView>
       <StatusBar style="auto" />
