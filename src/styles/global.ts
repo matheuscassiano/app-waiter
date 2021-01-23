@@ -19,6 +19,7 @@ export const Background = styled.View`
     justify-content: flex-start;
     padding-right: 32px;
     padding-left: 32px;
+    background-color: white;
 `
 
 export const PageTitle = styled.Text`
