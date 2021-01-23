@@ -30,16 +30,34 @@ export const CategoryItem = styled.View`
     width: 70px;
     height: 70px;
     display: flex;
+    align-items: center;
+    justify-content: flex-end;
     margin-right: 20px;
-    background-color: red;
-
-    &:first-child {
-        background-color: blue;
-    }
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
 `
 
 export const SwipeMenu = styled(ScrollView)`
     width: ${windowWidth - 32}px;
     height: 80px;
     margin: 20px 0 0 32px;
+`
+
+export const SubTitle = styled.Text`
+    width: 100%;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 32px 0 24px 32px;
+`
+
+export const LargeImage = styled.Image`
+    width: ${windowWidth * .6}px;
+    height: ${windowWidth * .3}px;
+    margin-left: 32px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
 `
