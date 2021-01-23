@@ -12,11 +12,20 @@ export const BackgroundImage = styled.ImageBackground`
     padding-left: 32px;
 `
 
+export const Background = styled.View`
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-right: 32px;
+    padding-left: 32px;
+    background-color: white;
+`
+
 export const PageTitle = styled.Text`
     font-size: 25px;
     font-weight: normal;
     text-align: center;
-    color: ${props => props.color};
     margin-top: ${StatusHeight + 20}px;
 `
 
