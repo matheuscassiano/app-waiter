@@ -7,13 +7,14 @@ const windowHeight = Dimensions.get('window').height;
 export const MenuButton = styled.TouchableOpacity`
     width: ${windowWidth * .4}px;
     height: ${windowWidth * .4}px;
+    max-width: 170px;
+    max-height: 170px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
     border-radius: 25px;
-    /* box-shadow: 10px 5px 5px black; */
     elevation: 5;
     shadowColor: rgba(46, 80, 119, 0.25);
     background-color: white;

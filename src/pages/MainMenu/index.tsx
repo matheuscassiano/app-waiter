@@ -1,6 +1,5 @@
 import React from 'react'
 import { StatusBar } from 'expo-status-bar'
-import Svg, { Circle, Rect, Path } from 'react-native-svg'
 import { Text } from 'react-native'
 
 import { Background, PageTitle } from '../../styles/global'
@@ -18,7 +17,7 @@ export default function App({ navigation }) {
     <Background>
       <PageTitle>Comanda Mobile</PageTitle>
       <MenuContainer>
-        <MenuButton>
+        <MenuButton onPress={() => navigation.push('Tables')}>
           <Icon source={ TablesIcon } />
           <Text>Mesas</Text>
         </MenuButton>
