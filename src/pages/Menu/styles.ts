@@ -15,7 +15,7 @@ export const Background = styled.View`
 export const MenuHeader = styled.View`
     width: 100%;
     display: flex;
-    elevation: 10;
+    elevation: 5;
     background-color: white;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -55,9 +55,13 @@ export const SubTitle = styled.Text`
 export const LargeImage = styled.Image`
     width: ${windowWidth * .6}px;
     height: ${windowWidth * .3}px;
-    margin-left: 32px;
+    margin: 0 20px 15px 0;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
+`
+
+export const SwipeProm = styled(ScrollView)`
+    padding: 0 32px;
 `
