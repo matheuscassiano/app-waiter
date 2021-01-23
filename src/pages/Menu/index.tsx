@@ -3,7 +3,7 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
-import { PageTitle, Price } from '../../styles/global';
+import { PageTitle, Price, LineBreack } from '../../styles/global';
 import { 
   Background, MenuHeader, CategoryItem, 
   SwipeMenu, Search, SubTitle, LargeImage,
@@ -83,6 +83,7 @@ export default function App() {
             <Text>R$ 50.00</Text>
           </View>
         </SwipeProm>
+        <LineBreack />
         <SubTitle>Cervejas</SubTitle>
         <View>
         <ItemCard>

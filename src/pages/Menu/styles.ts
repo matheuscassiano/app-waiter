@@ -3,9 +3,10 @@ import { StatusBar } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { Dimensions } from 'react-native'
 
-import { InputField } from '../../styles/global'
 const windowWidth = Dimensions.get('window').width;
 const StatusHeight = StatusBar.currentHeight as number
+
+import { InputField } from '../../styles/global'
 
 export const Background = styled.View`
     flex: 1;
@@ -49,7 +50,7 @@ export const SubTitle = styled.Text`
     width: 100%;
     font-size: 30px;
     font-weight: 600;
-    margin: 32px 0 24px 32px;
+    margin: 20px 0 24px 32px;
 `
 
 export const LargeImage = styled.Image`

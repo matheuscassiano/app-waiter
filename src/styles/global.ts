@@ -1,6 +1,8 @@
 import styled from 'styled-components/native';
 import { StatusBar } from 'react-native';
+import { Dimensions } from 'react-native'
 
+const windowWidth = Dimensions.get('window').width;
 const StatusHeight = StatusBar.currentHeight as number
 
 export const BackgroundImage = styled.ImageBackground`
@@ -21,6 +23,14 @@ export const Background = styled.View`
     padding: 0 32px;
     background-color: white;
 `
+
+export const LineBreack = styled.View`
+    width: ${windowWidth - 64}px;
+    margin: 15px 32px 0;
+    border-bottom-width: .3px;
+    border-bottom-color: #00000030;
+`
+
 
 export const PageTitle = styled.Text`
     font-size: 30px;
