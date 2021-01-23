@@ -12,7 +12,7 @@ export default function App({ navigation }) {
   return (
     <Background>
       <TopBar>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
           <ArrowLeft />
         </TouchableOpacity>
         <Search placeholder="Pesquisar por mesas ou clientes"/>

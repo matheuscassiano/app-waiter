@@ -17,7 +17,7 @@ export default function App({ navigation }) {
     <Background>
       <PageTitle>Comanda Mobile</PageTitle>
       <MenuContainer>
-        <MenuButton onPress={() => navigation.navigate('Tables')}>
+        <MenuButton onPress={() => navigation.push('Tables')}>
           <Icon source={ TablesIcon } />
           <Text>Mesas</Text>
         </MenuButton>

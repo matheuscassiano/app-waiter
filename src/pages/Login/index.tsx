@@ -19,7 +19,7 @@ export default function App({ navigation }) {
       <TouchableOpacity>
         <ForgotPass color="white">Esqueceu a senha</ForgotPass>
       </TouchableOpacity>
-      <Button color="#08AF24" onPress={() => navigation.navigate('MainMenu')}>Entrar</Button>
+      <Button color="#08AF24" onPress={() => navigation.push('MainMenu')}>Entrar</Button>
       <StatusBar style="light" />
     </BackgroundImage>
   )
