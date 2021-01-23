@@ -1,9 +1,14 @@
 import React from 'react';
 import { Item, Content, RoundedImage,ItemTitle } from './styles';
 
-export function ItemCard({ children }){
+interface ItemCardInterface {
+  onPress?: Function;
+  children: any;
+}
+
+export function ItemCard(props: ItemCardInterface){
   return (
-  <Item>{children}</Item>
+  <Item onPress={props.onPress}>{props.children}</Item>
 )};
 
 export { 
