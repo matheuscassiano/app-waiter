@@ -1,7 +1,13 @@
 import React from 'react';
-import { ListItem } from './styles';
+import { Item, Content, RoundedImage,ItemTitle } from './styles';
 
-export default function Button({ children }){
+export function ItemCard({ children }){
   return (
-  <ListItem>{children}</ListItem>
+  <Item>{children}</Item>
 )};
+
+export { 
+  Content,
+  RoundedImage,
+  ItemTitle
+}

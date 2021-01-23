@@ -11,7 +11,8 @@ import {
 
 import FoodeOne from '../../assets/food01.png'
 import FoodeTwo from '../../assets/food02.png'
-import { ListItem } from '../../components/ItemList/styles';
+import Beer from '../../assets/beer.png'
+import { ItemCard, Content, RoundedImage, ItemTitle } from '../../components/ItemList';
 
 export default function App() {
   return (
@@ -84,10 +85,17 @@ export default function App() {
         </SwipeProm>
         <SubTitle>Cervejas</SubTitle>
         <View>
-          <ListItem>
-            <Text>Nome</Text>
-            <Text>Nome</Text>
-          </ListItem>
+        <ItemCard>
+          <Content>
+            <RoundedImage source={Beer} />
+            <View>
+              <ItemTitle>Skol - Cerveja Skol Pilsen</ItemTitle>
+              <Text>Bebida - 600ml</Text>
+            </View>
+          </Content>
+          <Text>Nome</Text>
+        </ItemCard>
+          
         </View>
       </ScrollView>
       <StatusBar style="auto" />
