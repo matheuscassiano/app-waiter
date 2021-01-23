@@ -18,14 +18,13 @@ export const Background = styled.View`
     align-items: center;
     justify-content: flex-start;
     padding-top: ${StatusHeight + 20}px;
-    padding-right: 32px;
-    padding-left: 32px;
+    padding: 0 32px;
     background-color: white;
 `
 
 export const PageTitle = styled.Text`
-    font-size: 25px;
-    font-weight: normal;
+    font-size: 30px;
+    font-weight: 600;
     text-align: center;
 `
 
