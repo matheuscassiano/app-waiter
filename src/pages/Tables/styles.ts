@@ -1,38 +1,18 @@
 import styled from 'styled-components/native'
+import {  InputField } from '../../styles/global'
 import { Dimensions } from 'react-native'
 
 const windowWidth = Dimensions.get('window').width;
-const windowHeight = Dimensions.get('window').height;
 
-export const MenuButton = styled.TouchableOpacity`
-    width: ${windowWidth * .4}px;
-    height: ${windowWidth * .4}px;
-    max-width: 170px;
-    max-height: 170px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    border-radius: 25px;
-    elevation: 5;
-    shadowColor: rgba(46, 80, 119, 0.25);
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(46, 80, 119, 0.25); 
-`
-
-export const MenuContainer = styled.View`
+export const TopBar = styled.View`
     width: 100%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
-    margin-top: 40px;
 `
 
-export const Icon = styled.Image`
-    width: 60%;
-    height: 50%;
-    margin-bottom: 10px;
-    resize-mode: contain;
+export const Search = styled(InputField)`
+    width: ${windowWidth - 120}px;
+    align-self: flex-end;
 `
