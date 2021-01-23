@@ -3,7 +3,7 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
-import { PageTitle, Price, LineBreack } from '../../styles/global';
+import { PageTitle, Price, LineBreak, MinPrice, MinSubPrice } from '../../styles/global';
 import { 
   Background, MenuHeader, CategoryItem, 
   SwipeMenu, Search, SubTitle, LargeImage,
@@ -60,30 +60,30 @@ export default function App() {
           <View>
             <LargeImage source={FoodeOne} />
             <Text>Picanha na Chapa com Fritas</Text>
-            <Text>R$ 50.00</Text>
+            <Text><MinPrice>R$ 50.00</MinPrice> <MinSubPrice>R$ 66.00</MinSubPrice></Text>
           </View>
           <View>
             <LargeImage source={FoodeOne} />
             <Text>Picanha na Chapa com Fritas</Text>
-            <Text>R$ 50.00</Text>
+            <Text><MinPrice>R$ 50.00</MinPrice> <MinSubPrice>R$ 66.00</MinSubPrice></Text>
           </View>
           <View>
             <LargeImage source={FoodeOne} />
             <Text>Picanha na Chapa com Fritas</Text>
-            <Text>R$ 50.00</Text>
+            <Text><MinPrice>R$ 50.00</MinPrice> <MinSubPrice>R$ 66.00</MinSubPrice></Text>
           </View>
           <View>
             <LargeImage source={FoodeOne} />
             <Text>Picanha na Chapa com Fritas</Text>
-            <Text>R$ 50.00</Text>
+            <Text><MinPrice>R$ 50.00</MinPrice> <MinSubPrice>R$ 66.00</MinSubPrice></Text>
           </View>
           <View>
             <LargeImage source={FoodeOne} />
             <Text>Picanha na Chapa com Fritas</Text>
-            <Text>R$ 50.00</Text>
+            <Text><MinPrice>R$ 50.00</MinPrice> <MinSubPrice>R$ 66.00</MinSubPrice></Text>
           </View>
         </SwipeProm>
-        <LineBreack />
+        <LineBreak />
         <SubTitle>Cervejas</SubTitle>
         <View>
         <ItemCard>
