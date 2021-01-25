@@ -1,6 +1,8 @@
 import styled from 'styled-components/native';
 import { StatusBar } from 'react-native';
+import { Dimensions } from 'react-native'
 
+const windowWidth = Dimensions.get('window').width;
 const StatusHeight = StatusBar.currentHeight as number
 
 export const BackgroundImage = styled.ImageBackground`
@@ -8,8 +10,7 @@ export const BackgroundImage = styled.ImageBackground`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-right: 32px;
-    padding-left: 32px;
+    padding: 0 32px;
 `
 
 export const Background = styled.View`
@@ -17,16 +18,29 @@ export const Background = styled.View`
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-right: 32px;
-    padding-left: 32px;
+    padding: 0 32px;
+    padding-top: ${StatusHeight + 20}px;
     background-color: white;
 `
 
+export const ArrowBack = styled.TouchableOpacity`
+   position: absolute;
+   top: ${StatusHeight + 25}px;
+   left: 32px;
+`
+export const LineBreak = styled.View`
+    width: ${windowWidth - 64}px;
+    margin: 15px 32px 0;
+    border-bottom-width: .3px;
+    border-bottom-color: #00000030;
+`
+
 export const PageTitle = styled.Text`
-    font-size: 25px;
-    font-weight: normal;
+    width: 100%;
     text-align: center;
-    margin-top: ${StatusHeight + 20}px;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
 `
 
 export const InputField = styled.TextInput`
@@ -38,4 +52,36 @@ export const InputField = styled.TextInput`
     background-color: white;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
     border-radius: 16px;
+    elevation: 4;
+`
+export const Price = styled.Text`
+    color: #608F5F;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+`
+
+export const MinPrice = styled.Text`
+    color: #8BBE8A;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    padding-right: 20px;
+`
+
+
+export const SubPrice = styled.Text`
+    color: #A0A0A0;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: italic;
+    text-decoration: line-through;
+`
+
+export const MinSubPrice = styled.Text`
+    color: #A0A0A0;
+    font-size: 13px;
+    font-weight: 700;
+    font-style: italic;
+    text-decoration: line-through;
 `
