@@ -10,8 +10,7 @@ export const BackgroundImage = styled.ImageBackground`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-right: 32px;
-    padding-left: 32px;
+    padding: 0 32px;
 `
 
 export const Background = styled.View`
@@ -24,6 +23,11 @@ export const Background = styled.View`
     background-color: white;
 `
 
+export const ArrowBack = styled.TouchableOpacity`
+   position: absolute;
+   top: ${StatusHeight + 25}px;
+   left: 32px;
+`
 export const LineBreak = styled.View`
     width: ${windowWidth - 64}px;
     margin: 15px 32px 0;
@@ -31,8 +35,9 @@ export const LineBreak = styled.View`
     border-bottom-color: #00000030;
 `
 
-
 export const PageTitle = styled.Text`
+    width: 100%;
+    text-align: center;
     font-size: 30px;
     font-weight: 600;
     text-align: center;

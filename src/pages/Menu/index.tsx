@@ -5,7 +5,7 @@ import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 
 import { 
   PageTitle, Price, LineBreak, MinPrice, MinSubPrice,
-  SubPrice } from '../../styles/global';
+  SubPrice, ArrowBack } from '../../styles/global';
 import { 
   Background, MenuHeader, CategoryItem, 
   SwipeMenu, Search, SubTitle, LargeImage,
@@ -16,6 +16,7 @@ import FoodeTwo from '../../assets/food02.png'
 import FoodeThree from '../../assets/food03.png'
 import Beer from '../../assets/beer.png'
 import BeerIcon from '../../assets/beerIcon.png'
+import ArrowLeft from '../../assets/arrow-left.svg'
 
 
 import { ItemCard, Content, RoundedImage, ItemTitle } from '../../components/ItemList';
@@ -24,7 +25,7 @@ import {
   ModalFooter, ModalTitle, ModalFooterText,
   ModalFooterButton } from '../../components/Modal';
 
-export default function App() {
+export default function App({ navigation }) {
   const [activeModalItem, setActiveModalItem] = useState(false)
   const [activeModalOrder, setActiveModalOrder] = useState(false)
   const [activePopup, setActivePopup] = useState(true)
@@ -33,7 +34,8 @@ export default function App() {
     <>
       <Background>
         <MenuHeader>
-          <PageTitle>Mesa 12</PageTitle>
+            <PageTitle>Mesa 12</PageTitle>
+            <ArrowBack onPress={() => navigation.goBack()}><ArrowLeft /></ArrowBack>
           <Search placeholder="Pesquisar pratos" />
             <SwipeMenu 
               horizontal={true} 
