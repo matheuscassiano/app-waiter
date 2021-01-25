@@ -11,7 +11,6 @@ export const Background = styled.View`
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 0 32px;
     padding-top: ${StatusHeight + 20}px;
     background-color: #08AF24;
 `
@@ -21,7 +20,7 @@ export const Title = styled(PageTitle)`
 `
 
 export const Card = styled.View`
-    width: 100%;
+    width: ${windowWidth - 64}px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,4 +47,33 @@ export const StarContainer = styled.View`
     align-items: center;
     justify-content: space-between;
     margin: 10px 0;
+`
+
+export const Content = styled.ScrollView`
+    width: 100%;
+    elevation: 10;
+    padding: 16px 32px;
+    background-color: white;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+`
+
+export const ContentTitle = styled.Text`
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    padding: 16px;
+`
+
+
+export const InputGroup = styled.View`
+    margin-bottom: 10px;
+`
+
+export const ButtonContainer = styled.View`
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
 `

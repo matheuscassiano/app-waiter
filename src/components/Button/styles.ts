@@ -15,6 +15,10 @@ export const ButtonContainer = styled.TouchableOpacity`
     box-shadow: 0px 0px 4px ${props => props.color}80;
 `
 
+export const MidButtonContainer = styled(ButtonContainer)`
+    width: 45%;
+`
+
 export const InnerText = styled.Text`
     color: white;
     font-size: 16px;
