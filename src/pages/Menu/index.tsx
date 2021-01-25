@@ -3,7 +3,9 @@ import React, { useState } from 'react';
 import { Text, View, Image } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
-import { PageTitle, Price, LineBreak, MinPrice, MinSubPrice } from '../../styles/global';
+import { 
+  PageTitle, Price, LineBreak, MinPrice, MinSubPrice
+  SubPrice } from '../../styles/global';
 import { 
   Background, MenuHeader, CategoryItem, 
   SwipeMenu, Search, SubTitle, LargeImage,
@@ -17,7 +19,9 @@ import BeerIcon from '../../assets/beerIcon.png'
 
 
 import { ItemCard, Content, RoundedImage, ItemTitle } from '../../components/ItemList';
-import { Modal } from '../../components/Modal';
+import { 
+  Modal, ModalInfo, ModalDetail, ModalTag, 
+  ModalFooter, ModalTitle } from '../../components/Modal';
 
 export default function App() {
   const [activeModalItem, setActiveModalItem] = useState(false)
@@ -211,8 +215,52 @@ export default function App() {
         <StatusBar style="auto" />
       </Background>
       <Modal active={activeModalItem} setActive={setActiveModalItem} cover={FoodeThree}>
-        <Text>Picanha na Chapa com Fritas</Text>
-        <Text>Medalhão de picanha feiro na  chapa com manteiga de garrafa</Text>
+        <ModalDetail>
+          <ModalTitle>Picanha na Chapa com Fritas</ModalTitle>
+          <Text>Medalhão de picanha feiro na  chapa com manteiga de garrafa</Text>
+          <Text>A partir de  <Price>R$ 70.00</Price> <SubPrice>R$88.00</SubPrice></Text>
+        </ModalDetail>
+        <ModalInfo>
+          <Text>Escolha o tamanho 0 de 1</Text>
+          <ModalTag>Obrigatório</ModalTag>
+        </ModalInfo>
+        <ScrollView>
+        <ItemCard>
+            <Content>
+              <RoundedImage source={Beer} />
+              <View>
+                <ItemTitle>Skol - Cerveja Skol Pilsen</ItemTitle>
+              </View>
+            </Content>
+            <Price>R$ 9.00</Price>
+            <Text>Test</Text>
+          </ItemCard>
+          <ItemCard>
+            <Content>
+              <RoundedImage source={Beer} />
+              <View>
+                <ItemTitle>Skol - Cerveja Skol Pilsen</ItemTitle>
+              </View>
+            </Content>
+            <Price>R$ 9.00</Price>
+            <Text>Test</Text>
+          </ItemCard>
+           <ItemCard>
+            <Content>
+              <RoundedImage source={Beer} />
+              <View>
+                <ItemTitle>Skol - Cerveja Skol Pilsen</ItemTitle>
+              </View>
+            </Content>
+            <Price>R$ 9.00</Price>
+            <Text>Test</Text>
+          </ItemCard>
+        </ScrollView>
+        <ModalFooter>
+          <Text></Text>
+          <Text>Adicionar</Text>
+          <Text>R$ 10.00</Text>
+        </ModalFooter>
       </Modal>
     </>
   );

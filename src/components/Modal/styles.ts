@@ -17,6 +17,7 @@ export const ModalContainer = styled.View`
 export const ModalContent = styled.View`
     width: 100%;
     min-height: 100px;
+    max-height: ${windowHeight - 250}px;
     position: absolute;
     bottom: 0;
     background-color: white;
@@ -38,6 +39,7 @@ export const ModalHeader = styled.View`
 
 export const Close = styled.TouchableOpacity`
     background-color: white;
+    padding: 5px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     border-bottom-left-radius: 50px;
@@ -51,6 +53,41 @@ export const Cover = styled.Image`
     border-top-right-radius: 50px;
 `
 
-export const ModalMain = styled.View`
+export const ModalTitle = styled.Text`
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+`
+
+export const ModalDetail = styled.View`
     padding: 16px 32px;
+`
+
+export const ModalInfo = styled.View`
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 32px;
+    background-color: #CFD3D8;
+`
+
+export const ModalTag = styled.Text`
+    color: white;
+    padding: 5px 15px;
+    font-weight: 700;
+    background-color: #363636;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+`
+
+export const ModalFooter = styled.View`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 32px;
+    background-color: #08AF24;
 `

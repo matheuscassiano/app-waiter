@@ -1,5 +1,7 @@
 import React from 'react';
-import { ModalContainer, ModalContent, ModalHeader, Close, Cover,ModalMain } from './styles';
+import { 
+  ModalContainer, ModalContent, ModalHeader, 
+  Close, Cover, ModalDetail, ModalInfo, ModalTag, ModalFooter, ModalTitle } from './styles';
 
 import ArrowDown from '../../assets/arrow-down.svg'
 import { Text } from 'react-native';
@@ -22,13 +24,19 @@ export const Modal = (props: ModalInterface) => {
         <Close onPress={() => props.setActive(false)}>
           <ArrowDown />
         </Close>
-        <Text>{props.title}</Text>
+        <ModalTitle>{props.title}</ModalTitle>
         <TouchableOpacity>{props.button}</TouchableOpacity>
       </ModalHeader>
       <Cover source={props.cover} />
-      <ModalMain>
-        {props.children}
-      </ModalMain>
+      {props.children}
     </ModalContent>
   </ModalContainer>
 )};
+
+export {
+  ModalDetail,
+  ModalTitle,
+  ModalInfo,
+  ModalTag,
+  ModalFooter
+}
