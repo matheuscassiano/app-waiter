@@ -1,7 +1,8 @@
 import React from 'react';
 import { 
   ModalContainer, ModalContent, ModalHeader, 
-  Close, Cover, ModalDetail, ModalInfo, ModalTag, ModalFooter, ModalTitle } from './styles';
+  Close, Cover, ModalDetail, ModalInfo, ModalTag, 
+  ModalFooter, ModalTitle, ModalFooterText } from './styles';
 
 import ArrowDown from '../../assets/arrow-down.svg'
 import { Text } from 'react-native';
@@ -38,5 +39,6 @@ export {
   ModalTitle,
   ModalInfo,
   ModalTag,
-  ModalFooter
+  ModalFooter,
+  ModalFooterText
 }

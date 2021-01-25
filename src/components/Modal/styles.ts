@@ -91,3 +91,7 @@ export const ModalFooter = styled.View`
     padding: 16px 32px;
     background-color: #08AF24;
 `
+
+export const ModalFooterText = styled.Text`
+    color: white;
+`

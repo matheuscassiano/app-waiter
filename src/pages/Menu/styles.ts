@@ -70,3 +70,16 @@ export const LargeImage = styled.Image`
 export const SwipeProm = styled(ScrollView)`
     padding: 0 32px;
 `
+export const Popup = styled.View`
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 32px;
+    position: absolute;
+    bottom: 16px;
+    left: 10%;
+    border-radius: 20px;
+    background-color: #08AF24;
+`

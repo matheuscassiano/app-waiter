@@ -9,7 +9,7 @@ import {
 import { 
   Background, MenuHeader, CategoryItem, 
   SwipeMenu, Search, SubTitle, LargeImage,
-  SwipeProm, Icon } from './styles'
+  SwipeProm, Icon, Popup } from './styles'
 
 import FoodeOne from '../../assets/food01.png'
 import FoodeTwo from '../../assets/food02.png'
@@ -21,7 +21,7 @@ import BeerIcon from '../../assets/beerIcon.png'
 import { ItemCard, Content, RoundedImage, ItemTitle } from '../../components/ItemList';
 import { 
   Modal, ModalInfo, ModalDetail, ModalTag, 
-  ModalFooter, ModalTitle } from '../../components/Modal';
+  ModalFooter, ModalTitle, ModalFooterText } from '../../components/Modal';
 
 export default function App() {
   const [activeModalItem, setActiveModalItem] = useState(false)
@@ -258,10 +258,14 @@ export default function App() {
         </ScrollView>
         <ModalFooter>
           <Text></Text>
-          <Text>Adicionar</Text>
-          <Text>R$ 10.00</Text>
+          <ModalFooterText>Adicionar</ModalFooterText>
+          <ModalFooterText>R$ 10.00</ModalFooterText>
         </ModalFooter>
       </Modal>
+      <Popup>
+        <ModalFooterText>Ver bandeija</ModalFooterText>
+        <ModalFooterText>R$ 70.00</ModalFooterText>
+      </Popup>
     </>
   );
 }
