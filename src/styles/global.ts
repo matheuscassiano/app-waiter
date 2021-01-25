@@ -64,6 +64,15 @@ export const MinPrice = styled.Text`
     padding-right: 20px;
 `
 
+
+export const SubPrice = styled.Text`
+    color: #A0A0A0;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: italic;
+    text-decoration: line-through;
+`
+
 export const MinSubPrice = styled.Text`
     color: #A0A0A0;
     font-size: 13px;

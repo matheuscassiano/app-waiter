@@ -4,7 +4,7 @@ import { Text, View, Image } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
 import { 
-  PageTitle, Price, LineBreak, MinPrice, MinSubPrice
+  PageTitle, Price, LineBreak, MinPrice, MinSubPrice,
   SubPrice } from '../../styles/global';
 import { 
   Background, MenuHeader, CategoryItem, 
