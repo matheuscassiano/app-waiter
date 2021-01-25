@@ -29,11 +29,10 @@ export const Search = styled(InputField)`
 
 export const CategoryItem = styled.View`
     width: 70px;
-    height: 70px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-right: 20px;
+    margin: 15px 20px 0 0;
     border-top-right-radius: 50px;
     border-top-left-radius: 50px;
     border-bottom-right-radius: 50px;
@@ -42,14 +41,12 @@ export const CategoryItem = styled.View`
 
 export const SwipeMenu = styled(ScrollView)`
     width: 100%;
-    height: 80px;
-    margin-top: 5px;
     padding-left: 32px;
 `
 
 export const Icon = styled.Image`
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
     margin-bottom: 5px;
 `
 
