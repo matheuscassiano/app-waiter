@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { Text, View, Image } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
+import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 
 import { 
   PageTitle, Price, LineBreak, MinPrice, MinSubPrice,
@@ -21,10 +21,13 @@ import BeerIcon from '../../assets/beerIcon.png'
 import { ItemCard, Content, RoundedImage, ItemTitle } from '../../components/ItemList';
 import { 
   Modal, ModalInfo, ModalDetail, ModalTag, 
-  ModalFooter, ModalTitle, ModalFooterText } from '../../components/Modal';
+  ModalFooter, ModalTitle, ModalFooterText,
+  ModalFooterButton } from '../../components/Modal';
 
 export default function App() {
   const [activeModalItem, setActiveModalItem] = useState(false)
+  const [activeModalOrder, setActiveModalOrder] = useState(false)
+  const [activePopup, setActivePopup] = useState(true)
 
   return (
     <>
@@ -214,6 +217,10 @@ export default function App() {
         </ScrollView>
         <StatusBar style="auto" />
       </Background>
+      <Popup active={activePopup} onPress={() => setActiveModalOrder(true)}>
+        <ModalFooterText>Ver bandeija</ModalFooterText>
+        <ModalFooterText>R$ 70.00</ModalFooterText>
+      </Popup>
       <Modal active={activeModalItem} setActive={setActiveModalItem} cover={FoodeThree}>
         <ModalDetail>
           <ModalTitle>Picanha na Chapa com Fritas</ModalTitle>
@@ -262,10 +269,46 @@ export default function App() {
           <ModalFooterText>R$ 10.00</ModalFooterText>
         </ModalFooter>
       </Modal>
-      <Popup>
-        <ModalFooterText>Ver bandeija</ModalFooterText>
-        <ModalFooterText>R$ 70.00</ModalFooterText>
-      </Popup>
+      <Modal active={activeModalOrder} setActive={setActiveModalOrder} title="Seus pedidos">
+      <ScrollView>
+        <ItemCard>
+            <Content>
+              <RoundedImage source={Beer} />
+              <View>
+                <ItemTitle>Skol - Cerveja Skol Pilsen</ItemTitle>
+                <Text>+ Item 01</Text>
+                <Text>+ Item 01</Text>
+                <Text>+ Item 01</Text>
+              </View>
+            </Content>
+            <Price>R$ 9.00</Price>
+            <Text>Test</Text>
+          </ItemCard>
+          <ItemCard>
+            <Content>
+              <RoundedImage source={Beer} />
+              <View>
+                <ItemTitle>Skol - Cerveja Skol Pilsen</ItemTitle>
+                <Text>+ Item 01</Text>
+                <Text>+ Item 01</Text>
+                <Text>+ Item 01</Text>
+                <Text>+ Item 01</Text>
+              </View>
+            </Content>
+            <Price>R$ 9.00</Price>
+            <Text>Test</Text>
+          </ItemCard>
+        </ScrollView>
+        <ModalFooter>
+          <View>
+            <ModalFooterText>Total</ModalFooterText>
+            <ModalFooterText>R$ 100.00</ModalFooterText>
+          </View>
+          <TouchableOpacity>
+            <ModalFooterButton>Enviar pedido</ModalFooterButton>
+          </TouchableOpacity>
+        </ModalFooter>
+      </Modal>
     </>
   );
 }

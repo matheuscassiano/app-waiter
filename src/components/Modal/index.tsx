@@ -2,7 +2,8 @@ import React from 'react';
 import { 
   ModalContainer, ModalContent, ModalHeader, 
   Close, Cover, ModalDetail, ModalInfo, ModalTag, 
-  ModalFooter, ModalTitle, ModalFooterText } from './styles';
+  ModalFooter, ModalTitle, ModalFooterText, 
+  ModalFooterButton } from './styles';
 
 import ArrowDown from '../../assets/arrow-down.svg'
 import { Text } from 'react-native';
@@ -26,6 +27,7 @@ export const Modal = (props: ModalInterface) => {
           <ArrowDown />
         </Close>
         <ModalTitle>{props.title}</ModalTitle>
+        <Text></Text>
         <TouchableOpacity>{props.button}</TouchableOpacity>
       </ModalHeader>
       <Cover source={props.cover} />
@@ -40,5 +42,6 @@ export {
   ModalInfo,
   ModalTag,
   ModalFooter,
-  ModalFooterText
+  ModalFooterText,
+  ModalFooterButton
 }

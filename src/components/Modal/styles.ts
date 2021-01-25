@@ -48,7 +48,7 @@ export const Close = styled.TouchableOpacity`
 
 export const Cover = styled.Image`
     width: 100%;
-    height: ${props => props.source !== undefined ? windowHeight * .3 : 50}px;
+    height: ${props => props.source !== undefined ? windowHeight * .3 : 70}px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
 `
@@ -94,4 +94,14 @@ export const ModalFooter = styled.View`
 
 export const ModalFooterText = styled.Text`
     color: white;
+`
+
+
+export const ModalFooterButton = styled.Text`
+    color: #08AF24;
+    font-size: 15px
+    font-weight: 700;
+    padding: 8px 32px;
+    border-radius: 32px;
+    background-color: white;
 `

@@ -70,7 +70,7 @@ export const LargeImage = styled.Image`
 export const SwipeProm = styled(ScrollView)`
     padding: 0 32px;
 `
-export const Popup = styled.View`
+export const Popup = styled.TouchableOpacity`
     width: 80%;
     display: flex;
     flex-direction: row;
@@ -78,7 +78,7 @@ export const Popup = styled.View`
     justify-content: space-between;
     padding: 20px 32px;
     position: absolute;
-    bottom: 16px;
+    bottom: ${props => props.active ? "16px" : "-100%"};
     left: 10%;
     border-radius: 20px;
     background-color: #08AF24;
