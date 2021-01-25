@@ -11,6 +11,7 @@ export const ButtonContainer = styled.TouchableOpacity`
     padding-left: 16px;
     border-radius: 16px;
     background-color: ${props => props.color};
+    elevation: 5;
     box-shadow: 0px 0px 4px ${props => props.color}80;
 `
 
