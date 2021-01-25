@@ -46,13 +46,13 @@ export const PageTitle = styled.Text`
 export const InputField = styled.TextInput`
     width: 100%;
     height: 48px;
-    margin: 8px auto;
+    margin: 5px auto;
     padding-right: 16px;
     padding-left: 16px;
     background-color: white;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
     border-radius: 16px;
-    elevation: 4;
+    border: solid 1px rgba(0, 0, 0, .2);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
 `
 export const Price = styled.Text`
     color: #608F5F;

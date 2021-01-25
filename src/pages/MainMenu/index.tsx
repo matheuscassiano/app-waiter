@@ -37,7 +37,7 @@ export default function App({ navigation }) {
           <Icon source={ SettingsIcon } />
           <Text>Configurações</Text>
         </MenuButton>
-        <MenuButton>
+        <MenuButton onPress={() => navigation.push('Account')}>
           <Icon source={ AccountIcon } />
           <Text>Conta</Text>
         </MenuButton>
