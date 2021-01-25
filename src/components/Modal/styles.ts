@@ -17,7 +17,7 @@ export const ModalContainer = styled.View`
 export const ModalContent = styled.View`
     width: 100%;
     min-height: 100px;
-    max-height: ${windowHeight - 250}px;
+    max-height: ${windowHeight - 235}px;
     position: absolute;
     bottom: 0;
     background-color: white;
