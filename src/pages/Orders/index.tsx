@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Text, View } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { TouchableOpacity } from 'react-native-gesture-handler'
@@ -6,12 +6,13 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 import { 
   TabsTop, TabItem, OrderCard, OrderTitle, MenuScroll,
   OrderText, OrderButton, OrderTag, OrderBackground,
-  OrderContainer, Back } from './styles'
+  OrderContainer, Back, OrderItem, OrderItemContent } from './styles'
 
 import ArrowLeft from '../../assets/arrow-left.svg'
 
 
 function Tables({ navigation }) {
+  const [cardActive, setCardActive] = useState('false')
   return (
     <>
       <OrderBackground>
@@ -35,14 +36,20 @@ function Tables({ navigation }) {
         <OrderContainer>
           <OrderCard>
             <OrderTitle>Mesa 1</OrderTitle>
-            <View>
+            <OrderItem>
+              <Text>1 {cardActive}</Text>
+              <OrderItemContent></OrderItemContent>
+            </OrderItem>
+            <OrderItem>
               <Text>1 Picanha</Text>
-              <Text>+ Item</Text>
-              <Text>+ Item</Text>
-              <Text>+ Item</Text>
-              <Text>+ Item</Text>
-              <OrderText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius massa elementum.Iscing elit. Pellentesque varius massa elementum.</OrderText>
-            </View>
+              <OrderItemContent active={cardActive} onPress={() => setCardActive('true')}>
+                <Text>+ Item</Text>
+                <Text>+ Item</Text>
+                <Text>+ Item</Text>
+                <Text>+ Item</Text>
+                <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius massa elementum.Iscing elit. Pellentesque varius massa elementum.</Text>
+              </OrderItemContent>
+            </OrderItem>
             <OrderButton>Entregue</OrderButton>
           </OrderCard>
         </OrderContainer>

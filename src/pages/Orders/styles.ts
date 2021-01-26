@@ -89,3 +89,16 @@ export const OrderTag = styled.Text`
 export const Back = styled(ArrowBack)`
     top: ${StatusHeight + 38}px;
 `
+
+export const OrderItem = styled.TouchableOpacity`
+    width: 100%;
+    justify-content: center;
+    padding: 16px 64px 16px 32px;
+    border-bottom-width: .3px;
+    border-bottom-color: #cccccc;
+`
+
+export const OrderItemContent = styled.View`
+    width: 100%;
+    display: ${(props: { active: any; }) => props.active ? "flex" : "none"};
+`
