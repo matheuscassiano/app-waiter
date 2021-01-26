@@ -3,14 +3,13 @@ import { Text, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-import { Background } from '../../styles/global';
 import { 
   TabsTop, TabItem, OrderCard, OrderTitle, 
-  OrderText, OrderButton } from './styles'
+  OrderText, OrderButton, OrderTag, OrderBackground } from './styles'
 
 function Tables({ navigation }) {
   return (
-    <Background>
+    <OrderBackground>
       <TabsTop>
         <TouchableOpacity onPress={() => navigation.navigate('Tables')}>
           <TabItem selected={true}>Mesas</TabItem>
@@ -20,15 +19,16 @@ function Tables({ navigation }) {
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate('Waiters')}>
           <TabItem>Favores</TabItem>
+          <OrderTag>1</OrderTag>
         </TouchableOpacity>
       </TabsTop>
-    </Background>
+    </OrderBackground>
   );
 }
 
 function Kitchen({ navigation }) {
   return (
-    <Background>
+    <OrderBackground>
       <TabsTop>
         <TouchableOpacity onPress={() => navigation.navigate('Tables')}>
           <TabItem >Mesas</TabItem>
@@ -38,15 +38,16 @@ function Kitchen({ navigation }) {
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate('Waiters')}>
           <TabItem>Favores</TabItem>
+          <OrderTag>1</OrderTag>
         </TouchableOpacity>
       </TabsTop>
-    </Background>
+    </OrderBackground>
   );
 }
 
 function Waiters({ navigation }) {
   return (
-    <Background>
+    <OrderBackground>
       <TabsTop>
         <TouchableOpacity onPress={() => navigation.navigate('Tables')}>
           <TabItem>Mesas</TabItem>
@@ -56,6 +57,7 @@ function Waiters({ navigation }) {
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate('Waiters')}>
           <TabItem selected={true}>Favores</TabItem>
+          <OrderTag>1</OrderTag>
         </TouchableOpacity>
       </TabsTop>
       <OrderCard>
@@ -64,7 +66,7 @@ function Waiters({ navigation }) {
         <OrderText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius massa elementum.Iscing elit. Pellentesque varius massa elementum.</OrderText>
           <OrderButton>A Caminho</OrderButton>
       </OrderCard>
-    </Background>
+    </OrderBackground>
   );
 }
 
