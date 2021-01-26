@@ -50,7 +50,7 @@ function Waiters({ navigation }) {
           <TabItem>Mesas</TabItem>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate('Kitchen')}>
-          <TabItem>Cozinha!</TabItem>
+          <TabItem>Cozinha</TabItem>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate('Waiters')}>
           <TabItem selected={true}>Favores</TabItem>

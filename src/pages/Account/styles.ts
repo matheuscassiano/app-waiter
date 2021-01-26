@@ -14,23 +14,6 @@ export const Background = styled.View`
     padding-top: ${StatusHeight + 20}px;
     background-color: #08AF24;
 `
-export const Title = styled(PageTitle)`
-    color: white;
-    margin-bottom: 32px;
-`
-
-export const Card = styled.View`
-    width: ${windowWidth - 64}px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 32px 60px;
-    margin-bottom: 32px;
-    border-radius: 20px;
-    background-color: white;
-    elevation: 20;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
-`
 
 export const Avatar = styled.Image`
     border-radius: 100px;
