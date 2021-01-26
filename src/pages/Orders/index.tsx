@@ -4,7 +4,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 import { Background } from '../../styles/global';
-import { TabsTop, TabItem } from './styles'
+import { 
+  TabsTop, TabItem, OrderCard, OrderTitle, 
+  OrderText, OrderButton } from './styles'
 
 function Tables({ navigation }) {
   return (
@@ -56,6 +58,12 @@ function Waiters({ navigation }) {
           <TabItem selected={true}>Favores</TabItem>
         </TouchableOpacity>
       </TabsTop>
+      <OrderCard>
+        <OrderTitle>Mesa 1</OrderTitle>
+        <Text>00:10</Text>
+        <OrderText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius massa elementum.Iscing elit. Pellentesque varius massa elementum.</OrderText>
+          <OrderButton>A Caminho</OrderButton>
+      </OrderCard>
     </Background>
   );
 }
