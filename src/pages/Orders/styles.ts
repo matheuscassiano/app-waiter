@@ -1,16 +1,24 @@
 import styled from 'styled-components/native'
 import { Background, Card, PageTitle } from '../../styles/global';
 import { Dimensions } from 'react-native'
+import { ArrowBack } from '../../styles/global'
+import { StatusBar } from 'react-native';
 
 const windowWidth = Dimensions.get('window').width;
+const StatusHeight = StatusBar.currentHeight as number
 
 export const OrderBackground = styled(Background)`
     padding-left: 0;
     padding-right: 0;
 `
 
+export const MenuScroll = styled.ScrollView`
+    height: 64px;
+`
+
 export const TabsTop = styled.View`
     width: ${windowWidth - 64}px;
+    padding-left: 32px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -20,7 +28,6 @@ export const TabItem = styled.Text`
     font-size: 16px;
     padding: 13px 25px;
     margin: 0 6px;
-    margin-bottom: 32px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     border-bottom-left-radius: 50px;
@@ -29,9 +36,16 @@ export const TabItem = styled.Text`
     background-color: ${props => props.selected ? "#08AF24": "white"};
 `
 
+export const OrderContainer = styled.ScrollView`
+    width: 100%;
+    height: 100%;
+    /* flex: 1; */
+`
+
 export const OrderCard = styled(Card)`
-    padding: 16px 0 0;
     elevation: 5;
+    padding: 16px 0 0;
+    margin: 10px auto;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -59,14 +73,19 @@ export const OrderButton = styled.Text`
 `
 
 export const OrderTag = styled.Text`
-    padding: 2.5px 8px;
+    font-size: 10px;
+    padding: 1px 5px;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 5px;
     color: white;
     background-color: #DE5753;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
+`
+
+export const Back = styled(ArrowBack)`
+    top: ${StatusHeight + 38}px;
 `
