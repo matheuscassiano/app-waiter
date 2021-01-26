@@ -29,7 +29,7 @@ export default function App({ navigation }) {
           <Icon source={ MenuIcon } />
           <Text>Cardápio</Text>
         </MenuButton>
-        <MenuButton>
+        <MenuButton  onPress={() => navigation.push('Orders')}>
           <Icon source={ OrdersIcon } />
           <Text>Pedidos</Text>
         </MenuButton>
