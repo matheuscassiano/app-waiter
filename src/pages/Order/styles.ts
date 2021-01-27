@@ -46,3 +46,7 @@ export const Item = styled.TouchableOpacity`
     border-bottom-width: .3px;
     border-bottom-color: #00000030;
 `
+
+export const ModalPadding = styled.View`
+    padding: 0 32px;
+`
