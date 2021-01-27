@@ -1,9 +1,6 @@
 import styled from 'styled-components/native';
 import { StatusBar } from 'react-native';
-import { Dimensions } from 'react-native'
-import { PageTitle } from '../../styles/global'
 
-const windowWidth = Dimensions.get('window').width;
 const StatusHeight = StatusBar.currentHeight as number
 
 export const Background = styled.View`
