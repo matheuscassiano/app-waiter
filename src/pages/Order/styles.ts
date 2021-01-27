@@ -1,10 +1,8 @@
-import styled from 'styled-components/native';
-// import { Dimensions } from 'react-native'
-import { StatusBar } from 'react-native';
-import { ItemCard } from '../../components/ItemList';
+import styled from 'styled-components/native'
+import { StatusBar } from 'react-native'
+import { ItemCard } from '../../components/ItemList'
 
 const StatusHeight = StatusBar.currentHeight as number
-// const windowWidth = Dimensions.get('window').width;
 
 export const Background = styled.View`
     height: 100%;
@@ -20,9 +18,22 @@ export const Info = styled.View`
 
 export const InfoText = styled.Text`
     font-size: 18px;
+    font-weight: 500;
+    padding: 3px;
 `
 
 export const InfoBold = styled.Text`
+    font-weight: 700;
+`
+
+export const InfoLine = styled.View`
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+`
+
+export const InfoBig = styled.Text`
+    font-size: 23px;
     font-weight: 700;
 `
 

@@ -2,15 +2,14 @@ import React from 'react'
 import { StatusBar } from 'expo-status-bar'
 
 import { 
-    Background, Avatar, Name, 
-    StarContainer, Content, ContentTitle,
-    ButtonContainer, InputGroup } from './styles'
+    Background, Avatar, Name, StarContainer, 
+    Content, ContentTitle, InputGroup } from './styles'
 
 import AvatarImage from '../../assets/avatar.png'
 import Star from '../../assets/star.svg'
 import { Text } from 'react-native'
 import { MidButton } from '../../components/Button'
-import { InputField, Title, Card } from '../../styles/global'
+import { InputField, Title, Card, ButtonContainer } from '../../styles/global'
 
 export default function App({ navigation }) {
     return (

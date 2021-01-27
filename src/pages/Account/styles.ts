@@ -46,14 +46,6 @@ export const ContentTitle = styled.Text`
     padding: 16px;
 `
 
-
 export const InputGroup = styled.View`
     margin-bottom: 10px;
-`
-
-export const ButtonContainer = styled.View`
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 32px;
 `

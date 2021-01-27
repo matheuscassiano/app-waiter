@@ -1,16 +1,22 @@
 import React, { useState } from 'react'
 import { StatusBar } from 'expo-status-bar'
 import { Text, View } from 'react-native'
-import ToggleSwitch from 'toggle-switch-react-native'
 
-import { Title, Card, PageTitle, ArrowBack, LineBreak, ListItem, Price } from '../../styles/global'
-import { Background, Item, Info, InfoText, InfoBold } from './styles'
+import { 
+    PageTitle, ArrowBack, More, LineBreak, ListItem, 
+    Price, ButtonContainer } from '../../styles/global'
+import { 
+    Background, Item, Info, InfoText, InfoBold, InfoLine, 
+    InfoBig } from './styles'
 
 import Beer from '../../assets/beer.png'
 import ArrowLeft from '../../assets/arrow-left.svg'
+import MoreIcon from '../../assets/more.svg'
 
-import { ScrollView } from 'react-native-gesture-handler';
-import { Content, ItemTitle, RoundedImage } from '../../components/ItemList';
+import { ScrollView } from 'react-native-gesture-handler'
+import { Content, ItemTitle, RoundedImage } from '../../components/ItemList'
+import { MidButton } from '../../components/Button'
+import Add from '../../components/Add'
 
 export default function App({ navigation }) {
     return (
@@ -52,8 +58,28 @@ export default function App({ navigation }) {
                     </Content>
                     <Price>R$ 9.00</Price>
                 </Item>
+                <Info>
+                    <InfoLine>
+                        <InfoText>Subtotal</InfoText>
+                        <Price><InfoText>R$ 256.00</InfoText></Price>
+                    </InfoLine>
+                    <InfoLine>
+                        <InfoText>Taxa de serviço</InfoText>
+                        <Price><InfoText>R$ 256.00</InfoText></Price>
+                    </InfoLine>
+                    <InfoLine>
+                        <InfoBig>Total</InfoBig>
+                        <Price><InfoBig>R$ 256.00</InfoBig></Price>
+                    </InfoLine>
+                    <ButtonContainer>
+                        <MidButton color="#EED535" onPress={() => console.log('oi')}>Fechar Conta</MidButton>
+                        <MidButton color="#08AF24" onPress={() => console.log('oi')}>Pagar Conta</MidButton>
+                    </ButtonContainer>
+                </Info>
             </ScrollView>
+            <Add onPress={() => navigation.navigate('Menu')} />
            <ArrowBack onPress={() => navigation.goBack()}><ArrowLeft /></ArrowBack>
+           <More onPress={() => console.log()}><MoreIcon /></More>
             <StatusBar style="dark" />
         </Background>
     )

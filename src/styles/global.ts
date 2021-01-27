@@ -28,6 +28,13 @@ export const ArrowBack = styled.TouchableOpacity`
    top: ${StatusHeight + 25}px;
    left: 32px;
 `
+
+export const More = styled.TouchableOpacity`
+   position: absolute;
+   top: ${StatusHeight + 25}px;
+   right: 32px;
+`
+
 export const LineBreak = styled.View`
     width: ${windowWidth - 64}px;
     margin: 15px 32px 0;
@@ -108,4 +115,11 @@ export const ListItem = styled.Text`
     font-size: 12px;
     color: #5E5E5E;
     padding: 2px 0;
+`
+
+export const ButtonContainer = styled.View`
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px 0 32px;
 `
