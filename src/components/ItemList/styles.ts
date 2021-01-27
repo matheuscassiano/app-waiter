@@ -7,8 +7,8 @@ export const Item = styled.TouchableOpacity`
     align-items: center;
     justify-content: space-between;
     padding: 10px 32px;
-    border-bottom-color: #00000030;
     border-bottom-width: .3px;
+    border-bottom-color: #00000030;
 `
 
 export const Content = styled.View`
