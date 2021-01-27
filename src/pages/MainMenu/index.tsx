@@ -33,7 +33,7 @@ export default function App({ navigation }) {
           <Icon source={ OrdersIcon } />
           <Text>Pedidos</Text>
         </MenuButton>
-        <MenuButton>
+        <MenuButton onPress={() => navigation.push('Settings')}>
           <Icon source={ SettingsIcon } />
           <Text>Configurações</Text>
         </MenuButton>

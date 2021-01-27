@@ -28,6 +28,29 @@ export const ArrowBack = styled.TouchableOpacity`
    top: ${StatusHeight + 25}px;
    left: 32px;
 `
+
+export const More = styled.TouchableOpacity`
+   position: absolute;
+   top: ${StatusHeight + 25}px;
+   right: 32px;
+`
+
+export const MoreModal = styled.View`
+    align-items: flex-end;
+    padding: 8px 16px 8px 32px;
+    position: absolute;
+    top: ${StatusHeight + 60}px;
+    right: ${props => props.active ? "32px" : "-100%" };
+    border-radius: 5px;
+    elevation: 5;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+`
+
+export const MoreModalItem = styled.Text`
+    padding: 8px 0;
+`
+
 export const LineBreak = styled.View`
     width: ${windowWidth - 64}px;
     margin: 15px 32px 0;
@@ -108,4 +131,11 @@ export const ListItem = styled.Text`
     font-size: 12px;
     color: #5E5E5E;
     padding: 2px 0;
+`
+
+export const ButtonContainer = styled.View`
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px 0 32px;
 `

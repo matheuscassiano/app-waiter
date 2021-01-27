@@ -10,6 +10,8 @@ import Tables from './pages/Tables'
 import Menu from './pages/Menu'
 import Account from './pages/Account'
 import Orders from './pages/Orders'
+import Order from './pages/Order'
+import Settings from './pages/Settings'
 
 export default function Routes() {
     return (
@@ -21,6 +23,8 @@ export default function Routes() {
                 <AppStack.Screen name="Menu" component={Menu} />
                 <AppStack.Screen name="Account" component={Account} />
                 <AppStack.Screen name="Orders" component={Orders} />
+                <AppStack.Screen name="Order" component={Order} />
+                <AppStack.Screen name="Settings" component={Settings} />
             </AppStack.Navigator>
         </NavigationContainer>
     )

@@ -1,9 +1,6 @@
 import styled from 'styled-components/native';
 import { StatusBar } from 'react-native';
-import { Dimensions } from 'react-native'
-import { PageTitle } from '../../styles/global'
 
-const windowWidth = Dimensions.get('window').width;
 const StatusHeight = StatusBar.currentHeight as number
 
 export const Background = styled.View`
@@ -49,14 +46,6 @@ export const ContentTitle = styled.Text`
     padding: 16px;
 `
 
-
 export const InputGroup = styled.View`
     margin-bottom: 10px;
-`
-
-export const ButtonContainer = styled.View`
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 32px;
 `
