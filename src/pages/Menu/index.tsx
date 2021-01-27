@@ -307,7 +307,7 @@ export default function App({ navigation }) {
             <ModalFooterText>Total</ModalFooterText>
             <ModalFooterText>R$ 100.00</ModalFooterText>
           </View>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('Order')}>
             <ModalFooterButton>Enviar pedido</ModalFooterButton>
           </TouchableOpacity>
         </ModalFooter>
