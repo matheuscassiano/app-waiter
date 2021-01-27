@@ -46,13 +46,13 @@ export const PageTitle = styled.Text`
 export const InputField = styled.TextInput`
     width: 100%;
     height: 48px;
-    margin: 8px auto;
+    margin: 5px auto;
     padding-right: 16px;
     padding-left: 16px;
     background-color: white;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
     border-radius: 16px;
-    elevation: 4;
+    border: solid 1px rgba(0, 0, 0, .2);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
 `
 export const Price = styled.Text`
     color: #608F5F;
@@ -84,4 +84,28 @@ export const MinSubPrice = styled.Text`
     font-weight: 700;
     font-style: italic;
     text-decoration: line-through;
+`
+
+export const Title = styled(PageTitle)`
+    color: white;
+    margin-bottom: 32px;
+`
+
+export const Card = styled.View`
+    width: ${windowWidth - 64}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 60px;
+    margin-bottom: 32px;
+    border-radius: 20px;
+    background-color: white;
+    elevation: 20;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+`
+
+export const ListItem = styled.Text`
+    font-size: 12px;
+    color: #5E5E5E;
+    padding: 2px 0;
 `
