@@ -1,30 +1,29 @@
 import styled from 'styled-components/native';
-import { StatusBar } from 'react-native';
 import { Dimensions } from 'react-native'
 import { Picker } from '@react-native-picker/picker';
-import { PageTitle } from '../../styles/global'
 
 const windowWidth = Dimensions.get('window').width;
-const StatusHeight = StatusBar.currentHeight as number
 
 export const Label = styled.Text`
     font-size: 16px;
+    margin-top: 10px;
 `
 
 export const SwitchGroup = styled.View`
     width: 100%;
-    margin: 8px 0;
+    padding: 10px 0;
     flex-direction: row;
+    align-items: flex-end;
     justify-content: space-between;
 `
 
 export const SelectFieldContainer = styled.View`
-    elevation: 5;
-    margin-top: 10px;
+    margin-bottom: 10px;
     padding: 0 12px;
-    box-shadow: 0 0 0 black;
+    border-radius: 16px;
     background-color: white;
-    border-radius: 12px;
+    border: solid 1px rgba(0, 0, 0, .2);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
 `
 
 export const SelectField = styled(Picker)`

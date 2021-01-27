@@ -8,6 +8,7 @@ import { Background, Title, Card, PageTitle, ArrowBack } from '../../styles/glob
 import { Label, SwitchGroup, SelectField, SelectFieldContainer } from './styles'
 
 import ArrowLeft from '../../assets/arrow-left.svg'
+import SettingsImage from '../../assets/settings.svg'
 
 export default function App({ navigation }) {
     const [ordersActive, setOrdersActive] = useState(false)
@@ -51,7 +52,7 @@ export default function App({ navigation }) {
                     <SelectField
                     mode="dropdown"
                     selectedValue={"default"}
-                    onValueChange={(itemValue, itemIndex) => console.log('oi')}>
+                    onValueChange={(itemValue) => console.log('oi')}>
                         <Picker.Item label="Toque padrão" value="default" />
                         <Picker.Item label="Toque Um" value="1" />
                         <Picker.Item label="Toque Dois" value="2" />
@@ -60,6 +61,37 @@ export default function App({ navigation }) {
                     </SelectField>
                 </SelectFieldContainer>
             </View>
+            <View>
+                <Label>Selecione o toque de Favores</Label>
+                <SelectFieldContainer>
+                    <SelectField
+                    mode="dropdown"
+                    selectedValue={"default"}
+                    onValueChange={(itemValue) => console.log('oi')}>
+                        <Picker.Item label="Toque padrão" value="default" />
+                        <Picker.Item label="Toque Um" value="1" />
+                        <Picker.Item label="Toque Dois" value="2" />
+                        <Picker.Item label="Toque Três" value="3" />
+                        <Picker.Item label="Toque Quatro" value="4" />
+                    </SelectField>
+                </SelectFieldContainer>
+            </View>
+            <View>
+                <Label>Selecione o toque de Cozinha</Label>
+                <SelectFieldContainer>
+                    <SelectField
+                    mode="dropdown"
+                    selectedValue={"default"}
+                    onValueChange={(itemValue) => console.log('oi')}>
+                        <Picker.Item label="Toque padrão" value="default" />
+                        <Picker.Item label="Toque Um" value="1" />
+                        <Picker.Item label="Toque Dois" value="2" />
+                        <Picker.Item label="Toque Três" value="3" />
+                        <Picker.Item label="Toque Quatro" value="4" />
+                    </SelectField>
+                </SelectFieldContainer>
+            </View>
+            <SettingsImage />
            <ArrowBack onPress={() => navigation.goBack()}><ArrowLeft /></ArrowBack>
             <StatusBar style="dark" />
         </Background>
