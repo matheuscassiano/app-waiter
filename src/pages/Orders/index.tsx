@@ -12,7 +12,7 @@ import ArrowLeft from '../../assets/arrow-left.svg'
 
 
 function Tables({ navigation }) {
-  const [cardActive, setCardActive] = useState('false')
+  const [cardActive, setCardActive] = useState(false)
   return (
     <>
       <OrderBackground>
@@ -37,12 +37,12 @@ function Tables({ navigation }) {
           <OrderCard>
             <OrderTitle>Mesa 1</OrderTitle>
             <OrderItem>
-              <Text>1 {cardActive}</Text>
+              <Text>1 Picanha</Text>
               <OrderItemContent></OrderItemContent>
             </OrderItem>
-            <OrderItem>
+            <OrderItem onPress={() => setCardActive(!cardActive)}>
               <Text>1 Picanha</Text>
-              <OrderItemContent active={cardActive} onPress={() => setCardActive('true')}>
+              <OrderItemContent active={cardActive}>
                 <Text>+ Item</Text>
                 <Text>+ Item</Text>
                 <Text>+ Item</Text>
