@@ -5,7 +5,7 @@ import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 
 import { 
   PageTitle, Price, LineBreak, MinPrice, MinSubPrice,
-  SubPrice, ArrowBack } from '../../styles/global';
+  SubPrice, ArrowBack, ListItem } from '../../styles/global';
 import { 
   Background, MenuHeader, CategoryItem, 
   SwipeMenu, Search, SubTitle, LargeImage,
@@ -17,6 +17,7 @@ import FoodeThree from '../../assets/food03.png'
 import Beer from '../../assets/beer.png'
 import BeerIcon from '../../assets/beerIcon.png'
 import ArrowLeft from '../../assets/arrow-left.svg'
+import Delete from '../../assets/deleteButton.svg'
 
 
 import { ItemCard, Content, RoundedImage, ItemTitle } from '../../components/ItemList';
@@ -278,27 +279,27 @@ export default function App({ navigation }) {
               <RoundedImage source={Beer} />
               <View>
                 <ItemTitle>Skol - Cerveja Skol Pilsen</ItemTitle>
-                <Text>+ Item 01</Text>
-                <Text>+ Item 01</Text>
-                <Text>+ Item 01</Text>
+                <ListItem>+ Item 01</ListItem>
+                <ListItem>+ Item 01</ListItem>
+                <ListItem>+ Item 01</ListItem>
               </View>
             </Content>
             <Price>R$ 9.00</Price>
-            <Text>Test</Text>
+            <Delete />
           </ItemCard>
           <ItemCard>
             <Content>
               <RoundedImage source={Beer} />
               <View>
                 <ItemTitle>Skol - Cerveja Skol Pilsen</ItemTitle>
-                <Text>+ Item 01</Text>
-                <Text>+ Item 01</Text>
-                <Text>+ Item 01</Text>
-                <Text>+ Item 01</Text>
+                <ListItem>+ Item 01</ListItem>
+                <ListItem>+ Item 01</ListItem>
+                <ListItem>+ Item 01</ListItem>
+                <ListItem>+ Item 01</ListItem>
               </View>
             </Content>
             <Price>R$ 9.00</Price>
-            <Text>Test</Text>
+            <Delete />
           </ItemCard>
         </ScrollView>
         <ModalFooter>
