@@ -6,13 +6,15 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 import { 
   TabsTop, TabItem, OrderCard, OrderTitle, MenuScroll,
   OrderText, OrderButton, OrderTag, OrderBackground,
-  OrderContainer, Back, OrderItem, OrderItemContent } from './styles'
+  OrderContainer, Back, OrderItem, OrderItemContent,
+  OrderItemButton } from './styles'
 
 import ArrowLeft from '../../assets/arrow-left.svg'
+import { ListItem } from '../../styles/global'
 
 
 function Tables({ navigation }) {
-  const [cardActive, setCardActive] = useState('false')
+  const [cardActive, setCardActive] = useState(false)
   return (
     <>
       <OrderBackground>
@@ -37,18 +39,20 @@ function Tables({ navigation }) {
           <OrderCard>
             <OrderTitle>Mesa 1</OrderTitle>
             <OrderItem>
-              <Text>1 {cardActive}</Text>
-              <OrderItemContent></OrderItemContent>
-            </OrderItem>
-            <OrderItem>
               <Text>1 Picanha</Text>
-              <OrderItemContent active={cardActive} onPress={() => setCardActive('true')}>
-                <Text>+ Item</Text>
-                <Text>+ Item</Text>
-                <Text>+ Item</Text>
-                <Text>+ Item</Text>
-                <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius massa elementum.Iscing elit. Pellentesque varius massa elementum.</Text>
+              <OrderItemContent></OrderItemContent>
+              <OrderItemButton>E</OrderItemButton>
+            </OrderItem>
+            <OrderItem onPress={() => setCardActive(!cardActive)}>
+              <Text>1 Picanha</Text>
+              <OrderItemContent active={cardActive}>
+                <ListItem>+ Item</ListItem>
+                <ListItem>+ Item</ListItem>
+                <ListItem>+ Item</ListItem>
+                <ListItem>+ Item</ListItem>
+                <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius massa elementum.</Text>
               </OrderItemContent>
+              <OrderItemButton>E</OrderItemButton>
             </OrderItem>
             <OrderButton>Entregue</OrderButton>
           </OrderCard>

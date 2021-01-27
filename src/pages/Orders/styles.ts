@@ -93,7 +93,7 @@ export const Back = styled(ArrowBack)`
 export const OrderItem = styled.TouchableOpacity`
     width: 100%;
     justify-content: center;
-    padding: 16px 64px 16px 32px;
+    padding: 20px 64px 20px 32px;
     border-bottom-width: .3px;
     border-bottom-color: #cccccc;
 `
@@ -101,4 +101,17 @@ export const OrderItem = styled.TouchableOpacity`
 export const OrderItemContent = styled.View`
     width: 100%;
     display: ${(props: { active: any; }) => props.active ? "flex" : "none"};
+`
+
+export const OrderItemButton = styled.Text`
+    color: white;
+    font-size: 25px;
+    padding: 4px 13px;
+    position: absolute;
+    right: 32px;
+    background-color: #08AF24;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
 `
