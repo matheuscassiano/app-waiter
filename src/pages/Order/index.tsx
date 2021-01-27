@@ -3,8 +3,8 @@ import { StatusBar } from 'expo-status-bar'
 import { Text, View } from 'react-native'
 
 import { 
-    PageTitle, ArrowBack, More, LineBreak, ListItem, 
-    Price, ButtonContainer } from '../../styles/global'
+    PageTitle, ArrowBack, More, MoreModal, MoreModalItem, 
+    LineBreak, ListItem, Price, ButtonContainer } from '../../styles/global'
 import { 
     Background, Item, Info, InfoText, InfoBold, InfoLine, 
     InfoBig } from './styles'
@@ -13,12 +13,13 @@ import Beer from '../../assets/beer.png'
 import ArrowLeft from '../../assets/arrow-left.svg'
 import MoreIcon from '../../assets/more.svg'
 
-import { ScrollView } from 'react-native-gesture-handler'
+import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler'
 import { Content, ItemTitle, RoundedImage } from '../../components/ItemList'
 import { MidButton } from '../../components/Button'
 import Add from '../../components/Add'
 
 export default function App({ navigation }) {
+    const [moreActive, setMoreActive] = useState(true)
     return (
         <Background>
             <PageTitle>Conta do clientes</PageTitle>
@@ -79,7 +80,17 @@ export default function App({ navigation }) {
             </ScrollView>
             <Add onPress={() => navigation.navigate('Menu')} />
            <ArrowBack onPress={() => navigation.goBack()}><ArrowLeft /></ArrowBack>
-           <More onPress={() => console.log()}><MoreIcon /></More>
+           <More onPress={() => setMoreActive(!moreActive)}><MoreIcon /></More>
+           <MoreModal active={moreActive}>
+               <TouchableOpacity><MoreModalItem>Editar</MoreModalItem></TouchableOpacity>
+               <TouchableOpacity><MoreModalItem>Editar Qtd de Pessoas</MoreModalItem></TouchableOpacity>
+               <TouchableOpacity><MoreModalItem>Excluir mesa</MoreModalItem></TouchableOpacity>
+               <TouchableOpacity><MoreModalItem>Selecionar e dividir</MoreModalItem></TouchableOpacity>
+               <TouchableOpacity><MoreModalItem>Trocar mesa</MoreModalItem></TouchableOpacity>
+               <TouchableOpacity><MoreModalItem>Transferir item</MoreModalItem></TouchableOpacity>
+               <TouchableOpacity><MoreModalItem>Imprimir Conta</MoreModalItem></TouchableOpacity>
+               <TouchableOpacity><MoreModalItem>Visualizar por Item</MoreModalItem></TouchableOpacity>
+           </MoreModal>
             <StatusBar style="dark" />
         </Background>
     )

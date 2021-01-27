@@ -35,6 +35,22 @@ export const More = styled.TouchableOpacity`
    right: 32px;
 `
 
+export const MoreModal = styled.View`
+    align-items: flex-end;
+    padding: 8px 16px 8px 32px;
+    position: absolute;
+    top: ${StatusHeight + 60}px;
+    right: ${props => props.active ? "32px" : "-100%" };
+    border-radius: 5px;
+    elevation: 5;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+`
+
+export const MoreModalItem = styled.Text`
+    padding: 8px 0;
+`
+
 export const LineBreak = styled.View`
     width: ${windowWidth - 64}px;
     margin: 15px 32px 0;
