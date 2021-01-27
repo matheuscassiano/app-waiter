@@ -103,3 +103,9 @@ export const Card = styled.View`
     elevation: 20;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
 `
+
+export const ListItem = styled.Text`
+    font-size: 12px;
+    color: #5E5E5E;
+    padding: 2px 0;
+`
