@@ -4,7 +4,7 @@ import { Text, View } from 'react-native'
 import ToggleSwitch from 'toggle-switch-react-native'
 
 import { Title, Card, PageTitle, ArrowBack, LineBreak, ListItem, Price } from '../../styles/global'
-import { Background, Item } from './styles'
+import { Background, Item, Info, InfoText, InfoBold } from './styles'
 
 import Beer from '../../assets/beer.png'
 import ArrowLeft from '../../assets/arrow-left.svg'
@@ -16,6 +16,11 @@ export default function App({ navigation }) {
     return (
         <Background>
             <PageTitle>Conta do clientes</PageTitle>
+            <Info>
+                <InfoText><InfoBold>Cliente:</InfoBold> José de almeidas</InfoText>
+                <InfoText><InfoBold>Qtd. Pessoas:</InfoBold> 3</InfoText>
+                <InfoText><InfoBold>Senha do cardápio:</InfoBold> F4GH34J4</InfoText>
+            </Info>
             <LineBreak />
             <ScrollView>
                 <Item>
