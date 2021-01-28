@@ -100,7 +100,18 @@ export default function Payment({ navigation }) {
                             </>
                         ): selected === 'debit' ? (
                             <>
-                                <Text>debit</Text>
+                                <ScrollView 
+                                horizontal={true}
+                                showsHorizontalScrollIndicator={false}>
+                                    <Card><Image source={MasterCard} /></Card>
+                                    <Card><Image source={MasterCard} /></Card>
+                                    <Card><Image source={MasterCard} /></Card>
+                                    <Card><Image source={MasterCard} /></Card>
+                                </ScrollView>
+                                <PaymentInputContainer>
+                                    <InputField placeholder="Valor pago no cartão" keyboarType="numeric" />
+                                    <Button color="#08AF24" >Pagar</Button>
+                                </PaymentInputContainer>
                             </>
                         ): selected === 'pix' ? (
                             <>
