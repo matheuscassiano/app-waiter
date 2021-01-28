@@ -79,7 +79,7 @@ export default function App({ navigation }) {
                         </InfoLine>
                         <ButtonContainer>
                             <MidButton color="#EED535" onPress={() => console.log('oi')}>Fechar Conta</MidButton>
-                            <MidButton color="#08AF24" onPress={() => console.log('oi')}>Pagar Conta</MidButton>
+                            <MidButton color="#08AF24" onPress={() => navigation.navigate('Payment')}>Pagar Conta</MidButton>
                         </ButtonContainer>
                     </Info>
                 </ScrollView>
@@ -96,7 +96,6 @@ export default function App({ navigation }) {
                     <TouchableOpacity><MoreModalItem>Imprimir Conta</MoreModalItem></TouchableOpacity>
                     <TouchableOpacity><MoreModalItem>Visualizar por Item</MoreModalItem></TouchableOpacity>
                 </MoreModal>
-                <StatusBar style="dark" />
             </Background>
             <Modal active={quatityActive} setActive={setQuatityActive}>
                 <ModalPadding>
@@ -116,6 +115,7 @@ export default function App({ navigation }) {
                     </ButtonContainer>
                 </ModalPadding>
             </Modal>
+            <StatusBar style="dark" />
         </>
     )
 }

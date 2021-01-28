@@ -27,7 +27,29 @@ export default function App({ navigation }) {
     return (
         <Background>
             <PageTitle>Mesa 12</PageTitle>
-            <ArrowBack><ArrowLeft /></ArrowBack>
+            <Info>
+                <InputField placeholder="Cupom de desconto" />
+                <InfoLine>
+                    <InfoText>Subtotal</InfoText>
+                    <Price><InfoText>R$ 256.00</InfoText></Price>
+                </InfoLine>
+                <InfoLine>
+                    <InfoText>Taxa de serviço</InfoText>
+                    <Price><InfoText>R$ 256.00</InfoText></Price>
+                </InfoLine>
+                <InfoLine>
+                    <InfoBig>Total</InfoBig>
+                    <Price><InfoBig>R$ 256.00</InfoBig></Price>
+                </InfoLine>
+            </Info>
+            <ArrowBack onPress={() => navigation.goBack()}><ArrowLeft /></ArrowBack>
+            <More onPress={() => setMoreActive(!moreActive)}><MoreIcon /></More>
+            <MoreModal active={moreActive}>
+                <TouchableOpacity><MoreModalItem>Taxas</MoreModalItem></TouchableOpacity>
+                <TouchableOpacity onPress={() => setQuatityActive(true)}><MoreModalItem>Descontos</MoreModalItem></TouchableOpacity>
+                <TouchableOpacity><MoreModalItem>Imprimir conta</MoreModalItem></TouchableOpacity>
+                <TouchableOpacity><MoreModalItem>Número de pessoas</MoreModalItem></TouchableOpacity>
+            </MoreModal>
             <StatusBar style="dark" />
         </Background>
     )
