@@ -9,7 +9,7 @@ import {
 import { 
   Background, MenuHeader, CategoryItem, 
   SwipeMenu, Search, SubTitle, LargeImage,
-  SwipeProm, Icon, Popup } from './styles'
+  SwipeProm, Icon, Popup, CheckBox } from './styles'
 
 import FoodeOne from '../../assets/food01.png'
 import FoodeTwo from '../../assets/food02.png'
@@ -25,11 +25,15 @@ import {
   Modal, ModalInfo, ModalDetail, ModalTag, 
   ModalFooter, ModalTitle, ModalFooterText,
   ModalFooterButton } from '../../components/Modal';
+import NumberInput from '../../components/NumberInput';
 
 export default function App({ navigation }) {
   const [activeModalItem, setActiveModalItem] = useState(false)
   const [activeModalOrder, setActiveModalOrder] = useState(false)
   const [activePopup, setActivePopup] = useState(true)
+  const [checkBoxActive, setCheckBoxActive] = useState(false)
+
+  const [quantity, setQuantity] = useState(0)
 
   return (
     <>
@@ -235,7 +239,7 @@ export default function App({ navigation }) {
           <ModalTag>Obrigatório</ModalTag>
         </ModalInfo>
         <ScrollView>
-        <ItemCard>
+        <ItemCard onPress={() => setCheckBoxActive(!checkBoxActive)}>
             <Content>
               <RoundedImage source={Beer} />
               <View>
@@ -243,9 +247,9 @@ export default function App({ navigation }) {
               </View>
             </Content>
             <Price>R$ 9.00</Price>
-            <Text>Test</Text>
+            <CheckBox active={checkBoxActive} />
           </ItemCard>
-          <ItemCard>
+          <ItemCard onPress={() => setCheckBoxActive(!checkBoxActive)}>
             <Content>
               <RoundedImage source={Beer} />
               <View>
@@ -253,9 +257,9 @@ export default function App({ navigation }) {
               </View>
             </Content>
             <Price>R$ 9.00</Price>
-            <Text>Test</Text>
+            <CheckBox active={checkBoxActive} />
           </ItemCard>
-           <ItemCard>
+           <ItemCard onPress={() => setCheckBoxActive(!checkBoxActive)}>
             <Content>
               <RoundedImage source={Beer} />
               <View>
@@ -263,11 +267,11 @@ export default function App({ navigation }) {
               </View>
             </Content>
             <Price>R$ 9.00</Price>
-            <Text>Test</Text>
+            <CheckBox active={checkBoxActive} />
           </ItemCard>
         </ScrollView>
         <ModalFooter>
-          <Text></Text>
+          <NumberInput number={quantity} setNumber={setQuantity} />
           <ModalFooterText>Adicionar</ModalFooterText>
           <ModalFooterText>R$ 10.00</ModalFooterText>
         </ModalFooter>

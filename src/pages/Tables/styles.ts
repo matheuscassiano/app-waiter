@@ -3,7 +3,6 @@ import {  InputField } from '../../styles/global'
 import { Dimensions } from 'react-native'
 
 const windowWidth = Dimensions.get('window').width;
-import TableImage from '../../assets/table.svg'
 
 export const TopBar = styled.View`
     width: 100%;
@@ -25,6 +24,17 @@ export const TableContainer = styled.View`
     margin: 40px 0;
 `
 
-export const Table = styled(TableImage)`
-    margin-bottom: 20px
+export const Item = styled.TouchableOpacity`
+    margin-bottom: 20px;
+`
+
+export const ItemNumber = styled.Text`
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 95px;
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
+    position: absolute;
 `
