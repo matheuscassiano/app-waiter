@@ -36,7 +36,6 @@ export const InfoBig = styled.Text`
 `
 
 export const PaymentScroll = styled.ScrollView`
-    height: 0px;
 `
 
 export const ModalPadding = styled.View`
@@ -69,6 +68,7 @@ export const Card = styled.TouchableOpacity`
 `
 
 export const Item = styled.View`
+    padding: 32px 0;
     align-items: center;
     justify-content: center;
 `

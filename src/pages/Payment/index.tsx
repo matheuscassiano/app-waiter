@@ -50,6 +50,8 @@ export default function App({ navigation }) {
                         <Price><InfoBig>R$ 256.00</InfoBig></Price>
                     </InfoLine>
                 </Info>
+                <ScrollView>
+
                 <PaymentScroll horizontal={true}>
                     <Item>
                         <Card onPress={() => setSelected('money')}>
@@ -76,10 +78,9 @@ export default function App({ navigation }) {
                         <Text>Dinheiro</Text>
                     </Item>
                 </PaymentScroll>
-                <ScrollView>
                     {selected === 'money' ? (
                         <>
-                            <InputField />
+                            <InputField keyboarType="numeric" />
                         </>
                     ): selected === 'credit' ? (
                         <>
