@@ -36,7 +36,7 @@ export const InfoBig = styled.Text`
 `
 
 export const PaymentScroll = styled.ScrollView`
-    padding: 16px;
+    height: 0px;
 `
 
 export const ModalPadding = styled.View`
@@ -44,17 +44,31 @@ export const ModalPadding = styled.View`
 `
 
 export const MoneyImage = styled(Money)`
+    opacity: ${props => props.active === "money" || props.active === "All" ? 1 : .7};
+`
+
+export const CreditImage = styled(Money)`
+    opacity: ${props => props.active === "credit" || props.active === "All" ? 1 : .7};
+`
+
+export const DebitImage = styled(Money)`
+    opacity: ${props => props.active === "debit" || props.active === "All" ? 1 : .7};
+`
+
+export const PixImage = styled(Money)`
+    opacity: ${props => props.active === "pix" || props.active === "All" ? 1 : .7};
 `
 
 export const Card = styled.TouchableOpacity`
-    margin: 16px;
+    margin: 0 0 16px 16px;
     padding: 16px;
     background-color: #FFFFFF;
     border-radius: 16px;
     elevation: 8;
-    box-shadow: 0px 0px 8.36842px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
 `
 
 export const Item = styled.View`
     align-items: center;
+    justify-content: center;
 `

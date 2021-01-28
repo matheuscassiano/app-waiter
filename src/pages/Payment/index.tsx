@@ -9,18 +9,23 @@ import {
     Background, Info, InfoText, InfoLine, 
     InfoBig, PaymentScroll, MoneyImage, Card,
     Item, 
-    ModalPadding} from './styles'
+    ModalPadding,
+    CreditImage,
+    DebitImage,
+    PixImage} from './styles'
 
 import ArrowLeft from '../../assets/arrow-left.svg'
 import MoreIcon from '../../assets/more.svg'
 
-import { TouchableOpacity } from 'react-native-gesture-handler'
+import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler'
 import { MidButton } from '../../components/Button'
 import { Modal } from '../../components/Modal'
 import { SelectField, SelectFieldContainer } from '../Settings/styles'
 import { Picker } from '@react-native-picker/picker'
 
 export default function App({ navigation }) {
+    const [selected, setSelected] = useState('All')
+
     const [moreActive, setMoreActive] = useState(false)
     const [discountsActive, setDiscountsActive] = useState(false)
     const [rateActive, setRateActive] = useState(false)
@@ -46,25 +51,51 @@ export default function App({ navigation }) {
                     </InfoLine>
                 </Info>
                 <PaymentScroll horizontal={true}>
-                <Item>
-                        <Card>
-                            <MoneyImage />
+                    <Item>
+                        <Card onPress={() => setSelected('money')}>
+                            <MoneyImage active={selected} />
                         </Card>
                         <Text>Dinheiro</Text>
                     </Item>
                     <Item>
-                        <Card>
-                            <MoneyImage />
+                        <Card onPress={() => setSelected('credit')}>
+                            <CreditImage active={selected} />
                         </Card>
                         <Text>Dinheiro</Text>
                     </Item>
                     <Item>
-                        <Card>
-                            <MoneyImage />
+                        <Card onPress={() => setSelected('debit')}>
+                            <DebitImage active={selected} />
+                        </Card>
+                        <Text>Dinheiro</Text>
+                    </Item>
+                    <Item>
+                        <Card onPress={() => setSelected('pix')}>
+                            <PixImage active={selected} />
                         </Card>
                         <Text>Dinheiro</Text>
                     </Item>
                 </PaymentScroll>
+                <ScrollView>
+                    {selected === 'money' ? (
+                        <>
+                            <InputField />
+                        </>
+                    ): selected === 'credit' ? (
+                        <>
+                            <Text>credit</Text>
+                        </>
+                    ): selected === 'debit' ? (
+                        <>
+                            <Text>debit</Text>
+                        </>
+                    ): selected === 'pix' ? (
+                        <>
+                            <Text>pix</Text>
+                        </>
+                    ): (<></>)}
+                </ScrollView>
+
                 <ArrowBack onPress={() => navigation.goBack()}><ArrowLeft /></ArrowBack>
                 <More onPress={() => setMoreActive(!moreActive)}><MoreIcon /></More>
                 <MoreModal active={moreActive}>
