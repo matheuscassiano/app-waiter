@@ -40,6 +40,7 @@ export const PaymentScroll = styled.ScrollView`
 `
 
 export const ModalPadding = styled.View`
+    padding: 0 32px;
 `
 
 export const MoneyImage = styled(Money)`

@@ -8,7 +8,8 @@ import {
 import { 
     Background, Info, InfoText, InfoLine, 
     InfoBig, PaymentScroll, MoneyImage, Card,
-    Item } from './styles'
+    Item, 
+    ModalPadding} from './styles'
 
 import ArrowLeft from '../../assets/arrow-left.svg'
 import MoreIcon from '../../assets/more.svg'
@@ -16,59 +17,113 @@ import MoreIcon from '../../assets/more.svg'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import { MidButton } from '../../components/Button'
 import { Modal } from '../../components/Modal'
+import { SelectField, SelectFieldContainer } from '../Settings/styles'
+import { Picker } from '@react-native-picker/picker'
 
 export default function App({ navigation }) {
     const [moreActive, setMoreActive] = useState(false)
-    const [quatityActive, setQuatityActive] = useState(false)
-    const [transferActive, setTransferActive] = useState(false)
+    const [discountsActive, setDiscountsActive] = useState(false)
+    const [rateActive, setRateActive] = useState(false)
+    const [printerActive, setPrinterActive] = useState(false)
+    const [peopleActive, setPeopleActive] = useState(false)
     return (
-        <Background>
-            <PageTitle>Mesa 12</PageTitle>
-            <Info>
-                <InputField placeholder="Cupom de desconto" />
-                <InfoLine>
-                    <InfoText>Subtotal</InfoText>
-                    <Price><InfoText>R$ 256.00</InfoText></Price>
-                </InfoLine>
-                <InfoLine>
-                    <InfoText>Taxa de serviço</InfoText>
-                    <Price><InfoText>R$ 256.00</InfoText></Price>
-                </InfoLine>
-                <InfoLine>
-                    <InfoBig>Total</InfoBig>
-                    <Price><InfoBig>R$ 256.00</InfoBig></Price>
-                </InfoLine>
-            </Info>
-            <PaymentScroll horizontal={true}>
-            <Item>
-                    <Card>
-                        <MoneyImage />
-                    </Card>
-                    <Text>Dinheiro</Text>
-                </Item>
+        <>
+            <Background>
+                <PageTitle>Mesa 12</PageTitle>
+                <Info>
+                    <InputField placeholder="Cupom de desconto" />
+                    <InfoLine>
+                        <InfoText>Subtotal</InfoText>
+                        <Price><InfoText>R$ 256.00</InfoText></Price>
+                    </InfoLine>
+                    <InfoLine>
+                        <InfoText>Taxa de serviço</InfoText>
+                        <Price><InfoText>R$ 256.00</InfoText></Price>
+                    </InfoLine>
+                    <InfoLine>
+                        <InfoBig>Total</InfoBig>
+                        <Price><InfoBig>R$ 256.00</InfoBig></Price>
+                    </InfoLine>
+                </Info>
+                <PaymentScroll horizontal={true}>
                 <Item>
-                    <Card>
-                        <MoneyImage />
-                    </Card>
-                    <Text>Dinheiro</Text>
-                </Item>
-                <Item>
-                    <Card>
-                        <MoneyImage />
-                    </Card>
-                    <Text>Dinheiro</Text>
-                </Item>
-            </PaymentScroll>
-            <ArrowBack onPress={() => navigation.goBack()}><ArrowLeft /></ArrowBack>
-            <More onPress={() => setMoreActive(!moreActive)}><MoreIcon /></More>
-            <MoreModal active={moreActive}>
-                <TouchableOpacity><MoreModalItem>Taxas</MoreModalItem></TouchableOpacity>
-                <TouchableOpacity onPress={() => setQuatityActive(true)}><MoreModalItem>Descontos</MoreModalItem></TouchableOpacity>
-                <TouchableOpacity><MoreModalItem>Imprimir conta</MoreModalItem></TouchableOpacity>
-                <TouchableOpacity><MoreModalItem>Número de pessoas</MoreModalItem></TouchableOpacity>
-            </MoreModal>
+                        <Card>
+                            <MoneyImage />
+                        </Card>
+                        <Text>Dinheiro</Text>
+                    </Item>
+                    <Item>
+                        <Card>
+                            <MoneyImage />
+                        </Card>
+                        <Text>Dinheiro</Text>
+                    </Item>
+                    <Item>
+                        <Card>
+                            <MoneyImage />
+                        </Card>
+                        <Text>Dinheiro</Text>
+                    </Item>
+                </PaymentScroll>
+                <ArrowBack onPress={() => navigation.goBack()}><ArrowLeft /></ArrowBack>
+                <More onPress={() => setMoreActive(!moreActive)}><MoreIcon /></More>
+                <MoreModal active={moreActive}>
+                    <TouchableOpacity onPress={() => setRateActive(true)}><MoreModalItem>Taxas</MoreModalItem></TouchableOpacity>
+                    <TouchableOpacity onPress={() => setDiscountsActive(true)}><MoreModalItem>Descontos</MoreModalItem></TouchableOpacity>
+                    <TouchableOpacity onPress={() => setPrinterActive(true)}><MoreModalItem>Imprimir conta</MoreModalItem></TouchableOpacity>
+                    <TouchableOpacity onPress={() => setPeopleActive(true)}><MoreModalItem>Número de pessoas</MoreModalItem></TouchableOpacity>
+                </MoreModal>
 
-            <StatusBar style="dark" />
-        </Background>
+                <StatusBar style="dark" />
+            </Background>
+            <Modal active={discountsActive} setActive={setDiscountsActive}>
+                <ModalPadding>
+                    <InputField placeholder="Descontos" />
+                    <ButtonContainer>
+                        <MidButton color="#CE6F64" onPress={() => setDiscountsActive(false)}>Cancelar</MidButton>
+                        <MidButton color="#08AF24" onPress={() => setDiscountsActive(false)}>Aplicar</MidButton>
+                    </ButtonContainer>
+                </ModalPadding>
+            </Modal>
+            <Modal active={rateActive} setActive={setRateActive}>
+                <ModalPadding>
+                    <InputField placeholder="Tipo de taxa" />
+                    <InputField placeholder="Valor da taxa" keyboardType={'numeric'} />
+                    <ButtonContainer>
+                        <MidButton color="#CE6F64" onPress={() => setRateActive(false)}>Cancelar</MidButton>
+                        <MidButton color="#08AF24" onPress={() => setRateActive(false)}>Aplicar</MidButton>
+                    </ButtonContainer>
+                </ModalPadding>
+            </Modal>
+            <Modal active={printerActive} setActive={setPrinterActive}>
+                <ModalPadding>
+                <SelectFieldContainer>
+                    <SelectField
+                    mode="dropdown"
+                    selectedValue={"default"}
+                    onValueChange={(itemValue) => console.log('oi')}>
+                        <Picker.Item label="Empressora padrão" value="default" />
+                        <Picker.Item label="Empressora Um" value="1" />
+                        <Picker.Item label="Empressora Dois" value="2" />
+                        <Picker.Item label="Empressora Três" value="3" />
+                        <Picker.Item label="Empressora Quatro" value="4" />
+                    </SelectField>
+                </SelectFieldContainer>
+                    <ButtonContainer>
+                        <MidButton color="#CE6F64" onPress={() => setPrinterActive(false)}>Cancelar</MidButton>
+                        <MidButton color="#08AF24" onPress={() => setPrinterActive(false)}>Imprimir</MidButton>
+                    </ButtonContainer>
+                </ModalPadding>
+            </Modal>
+            <Modal active={peopleActive} setActive={setPeopleActive}>
+                <ModalPadding>
+                    <InputField placeholder="Número de pessoas" keyboardType={'numeric'} />
+                    <ButtonContainer>
+                        <MidButton color="#CE6F64" onPress={() => setPeopleActive(false)}>Cancelar</MidButton>
+                        <MidButton color="#08AF24" onPress={() => setPeopleActive(false)}>Aplicar</MidButton>
+                    </ButtonContainer>
+                </ModalPadding>
+            </Modal>
+        </>
     )
 }
