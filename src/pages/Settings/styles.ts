@@ -1,8 +1,16 @@
 import styled from 'styled-components/native';
 import { Dimensions } from 'react-native'
 import { Picker } from '@react-native-picker/picker';
+import { StatusBar } from 'react-native';
 
+const StatusHeight = StatusBar.currentHeight as number
 const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
+
+export const Container = styled.ScrollView`
+    flex: 1;
+    background: white;    
+`
 
 export const Label = styled.Text`
     font-size: 16px;
@@ -29,4 +37,8 @@ export const SelectFieldContainer = styled.View`
 export const SelectField = styled(Picker)`
     color: #A0A0A0;
     width: ${windowWidth - 88}px;
+`
+
+export const Group = styled.View`
+    padding: 16px 0;
 `
