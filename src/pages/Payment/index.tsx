@@ -12,13 +12,14 @@ import {
     ModalPadding,
     CreditImage,
     DebitImage,
-    PixImage} from './styles'
+    PixImage,
+    PaymentContainer} from './styles'
 
 import ArrowLeft from '../../assets/arrow-left.svg'
 import MoreIcon from '../../assets/more.svg'
 
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler'
-import { MidButton } from '../../components/Button'
+import { Button, MidButton } from '../../components/Button'
 import { Modal } from '../../components/Modal'
 import { SelectField, SelectFieldContainer } from '../Settings/styles'
 import { Picker } from '@react-native-picker/picker'
@@ -51,50 +52,52 @@ export default function App({ navigation }) {
                     </InfoLine>
                 </Info>
                 <ScrollView>
-
-                <PaymentScroll horizontal={true}>
-                    <Item>
-                        <Card onPress={() => setSelected('money')}>
-                            <MoneyImage active={selected} />
-                        </Card>
-                        <Text>Dinheiro</Text>
-                    </Item>
-                    <Item>
-                        <Card onPress={() => setSelected('credit')}>
-                            <CreditImage active={selected} />
-                        </Card>
-                        <Text>Dinheiro</Text>
-                    </Item>
-                    <Item>
-                        <Card onPress={() => setSelected('debit')}>
-                            <DebitImage active={selected} />
-                        </Card>
-                        <Text>Dinheiro</Text>
-                    </Item>
-                    <Item>
-                        <Card onPress={() => setSelected('pix')}>
-                            <PixImage active={selected} />
-                        </Card>
-                        <Text>Dinheiro</Text>
-                    </Item>
-                </PaymentScroll>
-                    {selected === 'money' ? (
-                        <>
-                            <InputField keyboarType="numeric" />
-                        </>
-                    ): selected === 'credit' ? (
-                        <>
-                            <Text>credit</Text>
-                        </>
-                    ): selected === 'debit' ? (
-                        <>
-                            <Text>debit</Text>
-                        </>
-                    ): selected === 'pix' ? (
-                        <>
-                            <Text>pix</Text>
-                        </>
-                    ): (<></>)}
+                    <PaymentScroll horizontal={true}>
+                        <Item>
+                            <Card onPress={() => setSelected('money')}>
+                                <MoneyImage active={selected} />
+                            </Card>
+                            <Text>Dinheiro</Text>
+                        </Item>
+                        <Item>
+                            <Card onPress={() => setSelected('credit')}>
+                                <CreditImage active={selected} />
+                            </Card>
+                            <Text>Dinheiro</Text>
+                        </Item>
+                        <Item>
+                            <Card onPress={() => setSelected('debit')}>
+                                <DebitImage active={selected} />
+                            </Card>
+                            <Text>Dinheiro</Text>
+                        </Item>
+                        <Item>
+                            <Card onPress={() => setSelected('pix')}>
+                                <PixImage active={selected} />
+                            </Card>
+                            <Text>Dinheiro</Text>
+                        </Item>
+                    </PaymentScroll>
+                    <PaymentContainer>
+                        {selected === 'money' ? (
+                            <>
+                                <InputField placeholder="Valor pago em dinheiro" keyboarType="numeric" />
+                                <Button color="#08AF24" >Pagar</Button>
+                            </>
+                        ): selected === 'credit' ? (
+                            <>
+                                <Text>credit</Text>
+                            </>
+                        ): selected === 'debit' ? (
+                            <>
+                                <Text>debit</Text>
+                            </>
+                        ): selected === 'pix' ? (
+                            <>
+                                <Text>pix</Text>
+                            </>
+                        ): (<></>)}
+                    </PaymentContainer>
                 </ScrollView>
 
                 <ArrowBack onPress={() => navigation.goBack()}><ArrowLeft /></ArrowBack>

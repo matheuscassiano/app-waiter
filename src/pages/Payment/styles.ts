@@ -72,3 +72,7 @@ export const Item = styled.View`
     align-items: center;
     justify-content: center;
 `
+
+export const PaymentContainer = styled.ScrollView`
+    padding: 0 32px;
+`
