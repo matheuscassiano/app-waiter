@@ -7,7 +7,6 @@ const StatusHeight = StatusBar.currentHeight as number
 
 export const BackgroundImage = styled.ImageBackground`
     height: 100%;
-    display: flex;
     align-items: center;
     justify-content: center;
     padding: 0 32px;
@@ -15,7 +14,6 @@ export const BackgroundImage = styled.ImageBackground`
 
 export const Background = styled.View`
     height: 100%;
-    display: flex;
     align-items: center;
     justify-content: flex-start;
     padding: 0 32px;
@@ -134,6 +132,7 @@ export const ListItem = styled.Text`
 `
 
 export const ButtonContainer = styled.View`
+    width: 100%;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;

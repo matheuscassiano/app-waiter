@@ -83,3 +83,10 @@ export const Popup = styled.TouchableOpacity`
     border-radius: 20px;
     background-color: #08AF24;
 `
+
+export const CheckBox = styled.View`
+    width: 25px;
+    height: 25px;
+    border-radius: 16px;
+    background-color: ${props => props.active ? "#08AF24" : "lightgray"};
+`
