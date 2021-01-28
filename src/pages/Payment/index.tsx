@@ -3,21 +3,18 @@ import { StatusBar } from 'expo-status-bar'
 import { Text, View } from 'react-native'
 
 import { 
-    PageTitle, ArrowBack, More, MoreModal, MoreModalItem, 
-    LineBreak, ListItem, Price, ButtonContainer, InputField } from '../../styles/global'
+    PageTitle, ArrowBack, More, MoreModal, MoreModalItem, Price, 
+    ButtonContainer, InputField } from '../../styles/global'
 import { 
-    Background, Item, Info, InfoText, InfoBold, InfoLine, 
-    InfoBig, 
-    ModalPadding} from './styles'
+    Background, Info, InfoText, InfoLine, 
+    InfoBig, PaymentScroll, MoneyImage, Card,
+    Item } from './styles'
 
-import Beer from '../../assets/beer.png'
 import ArrowLeft from '../../assets/arrow-left.svg'
 import MoreIcon from '../../assets/more.svg'
 
-import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler'
-import { Content, ItemTitle, RoundedImage } from '../../components/ItemList'
+import { TouchableOpacity } from 'react-native-gesture-handler'
 import { MidButton } from '../../components/Button'
-import Add from '../../components/Add'
 import { Modal } from '../../components/Modal'
 
 export default function App({ navigation }) {
@@ -42,6 +39,26 @@ export default function App({ navigation }) {
                     <Price><InfoBig>R$ 256.00</InfoBig></Price>
                 </InfoLine>
             </Info>
+            <PaymentScroll horizontal={true}>
+            <Item>
+                    <Card>
+                        <MoneyImage />
+                    </Card>
+                    <Text>Dinheiro</Text>
+                </Item>
+                <Item>
+                    <Card>
+                        <MoneyImage />
+                    </Card>
+                    <Text>Dinheiro</Text>
+                </Item>
+                <Item>
+                    <Card>
+                        <MoneyImage />
+                    </Card>
+                    <Text>Dinheiro</Text>
+                </Item>
+            </PaymentScroll>
             <ArrowBack onPress={() => navigation.goBack()}><ArrowLeft /></ArrowBack>
             <More onPress={() => setMoreActive(!moreActive)}><MoreIcon /></More>
             <MoreModal active={moreActive}>
@@ -50,6 +67,7 @@ export default function App({ navigation }) {
                 <TouchableOpacity><MoreModalItem>Imprimir conta</MoreModalItem></TouchableOpacity>
                 <TouchableOpacity><MoreModalItem>Número de pessoas</MoreModalItem></TouchableOpacity>
             </MoreModal>
+
             <StatusBar style="dark" />
         </Background>
     )

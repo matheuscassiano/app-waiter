@@ -7,8 +7,7 @@ import {
     LineBreak, ListItem, Price, ButtonContainer, InputField } from '../../styles/global'
 import { 
     Background, Item, Info, InfoText, InfoBold, InfoLine, 
-    InfoBig, 
-    ModalPadding} from './styles'
+    InfoBig, ModalPadding} from './styles'
 
 import Beer from '../../assets/beer.png'
 import ArrowLeft from '../../assets/arrow-left.svg'
