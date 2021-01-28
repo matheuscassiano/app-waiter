@@ -21,7 +21,7 @@ export default function App({ navigation }) {
           <Icon source={ TablesIcon } />
           <Text>Mesas</Text>
         </MenuButton>
-        <MenuButton>
+        <MenuButton onPress={() => navigation.push('Balcony')}>
           <Icon source={ BalconyIcon } />
           <Text>Balcão</Text>
         </MenuButton>
