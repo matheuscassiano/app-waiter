@@ -14,6 +14,7 @@ import {
 import ArrowLeft from '../../assets/arrow-left.svg'
 import MoreIcon from '../../assets/more.svg'
 import MasterCard from '../../assets/matercard.png'
+import QRCode from '../../assets/qrcode.png'
 
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler'
 import { Button, MidButton } from '../../components/Button'
@@ -115,7 +116,11 @@ export default function Payment({ navigation }) {
                             </>
                         ): selected === 'pix' ? (
                             <>
-                                <Text>pix</Text>
+                                <PaymentInputContainer>
+                                    <Image source={QRCode} />
+                                    <InputField placeholder="Valor pago no PIX" keyboarType="numeric" />
+                                    <Button color="#08AF24" >Pagar</Button>
+                                </PaymentInputContainer>
                             </>
                         ): (<></>)}
                     </View>

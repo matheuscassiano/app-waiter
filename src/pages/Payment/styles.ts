@@ -77,4 +77,5 @@ export const Item = styled.View`
 export const PaymentInputContainer = styled.View`
     width: ${windowWidth - 64}px;
     margin: 0 auto;
+    align-items: center;
 `
