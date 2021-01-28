@@ -1,6 +1,9 @@
 import styled from 'styled-components/native'
 import { StatusBar } from 'react-native'
+import { InputField } from '../../styles/global'
+import { Dimensions } from 'react-native'
 
+const windowWidth = Dimensions.get('window').width;
 import Money from '../../assets/money.svg'
 
 const StatusHeight = StatusBar.currentHeight as number
@@ -33,9 +36,6 @@ export const InfoBig = styled.Text`
     font-size: 23px;
     font-weight: 700;
     padding-top: 10px;
-`
-
-export const PaymentScroll = styled.ScrollView`
 `
 
 export const ModalPadding = styled.View`
@@ -73,6 +73,8 @@ export const Item = styled.View`
     justify-content: center;
 `
 
-export const PaymentContainer = styled.ScrollView`
-    padding: 0 32px;
+
+export const PaymentInputContainer = styled.View`
+    width: ${windowWidth - 64}px;
+    margin: 0 auto;
 `

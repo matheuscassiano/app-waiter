@@ -1,6 +1,5 @@
 import styled from 'styled-components/native'
 import { StatusBar } from 'react-native'
-import { ItemCard } from '../../components/ItemList'
 
 const StatusHeight = StatusBar.currentHeight as number
 

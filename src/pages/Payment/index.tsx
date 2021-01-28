@@ -7,13 +7,9 @@ import {
     ButtonContainer, InputField } from '../../styles/global'
 import { 
     Background, Info, InfoText, InfoLine, 
-    InfoBig, PaymentScroll, MoneyImage, Card,
-    Item, 
-    ModalPadding,
-    CreditImage,
-    DebitImage,
-    PixImage,
-    PaymentContainer} from './styles'
+    InfoBig, MoneyImage, Card, Item, 
+    ModalPadding,CreditImage, DebitImage,
+    PixImage, PaymentInputContainer } from './styles'
 
 import ArrowLeft from '../../assets/arrow-left.svg'
 import MoreIcon from '../../assets/more.svg'
@@ -24,7 +20,7 @@ import { Modal } from '../../components/Modal'
 import { SelectField, SelectFieldContainer } from '../Settings/styles'
 import { Picker } from '@react-native-picker/picker'
 
-export default function App({ navigation }) {
+export default function Payment({ navigation }) {
     const [selected, setSelected] = useState('All')
 
     const [moreActive, setMoreActive] = useState(false)
@@ -52,7 +48,9 @@ export default function App({ navigation }) {
                     </InfoLine>
                 </Info>
                 <ScrollView>
-                    <PaymentScroll horizontal={true}>
+                    <ScrollView 
+                    horizontal={true}
+                    showsHorizontalScrollIndicator={false}>
                         <Item>
                             <Card onPress={() => setSelected('money')}>
                                 <MoneyImage active={selected} />
@@ -77,16 +75,27 @@ export default function App({ navigation }) {
                             </Card>
                             <Text>Dinheiro</Text>
                         </Item>
-                    </PaymentScroll>
-                    <PaymentContainer>
+                    </ScrollView>
+                    <View>
                         {selected === 'money' ? (
-                            <>
+                            <PaymentInputContainer>
                                 <InputField placeholder="Valor pago em dinheiro" keyboarType="numeric" />
                                 <Button color="#08AF24" >Pagar</Button>
-                            </>
+                            </PaymentInputContainer>
                         ): selected === 'credit' ? (
                             <>
-                                <Text>credit</Text>
+                                <ScrollView 
+                                horizontal={true}
+                                showsHorizontalScrollIndicator={false}>
+                                    <Card><MoneyImage /></Card>
+                                    <Card><CreditImage /></Card>
+                                    <Card><DebitImage /></Card>
+                                    <Card><PixImage /></Card>
+                                </ScrollView>
+                                <PaymentInputContainer>
+                                    <InputField placeholder="Valor pago no cartão" keyboarType="numeric" />
+                                    <Button color="#08AF24" >Pagar</Button>
+                                </PaymentInputContainer>
                             </>
                         ): selected === 'debit' ? (
                             <>
@@ -97,7 +106,7 @@ export default function App({ navigation }) {
                                 <Text>pix</Text>
                             </>
                         ): (<></>)}
-                    </PaymentContainer>
+                    </View>
                 </ScrollView>
 
                 <ArrowBack onPress={() => navigation.goBack()}><ArrowLeft /></ArrowBack>
