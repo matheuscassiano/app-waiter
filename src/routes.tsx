@@ -12,6 +12,7 @@ import Account from './pages/Account'
 import Orders from './pages/Orders'
 import Order from './pages/Order'
 import Settings from './pages/Settings'
+import Payment from './pages/Payment'
 
 export default function Routes() {
     return (
@@ -25,6 +26,7 @@ export default function Routes() {
                 <AppStack.Screen name="Orders" component={Orders} />
                 <AppStack.Screen name="Order" component={Order} />
                 <AppStack.Screen name="Settings" component={Settings} />
+                <AppStack.Screen name="Payment" component={Payment} />
             </AppStack.Navigator>
         </NavigationContainer>
     )

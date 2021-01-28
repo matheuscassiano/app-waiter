@@ -20,7 +20,7 @@ export const MidButtonContainer = styled(ButtonContainer)`
 `
 
 export const InnerText = styled.Text`
-    color: white;
+    color: #FFFFFF;
     font-size: 16px;
     font-weight: bold;
 `
