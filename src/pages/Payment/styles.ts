@@ -59,7 +59,7 @@ export const PixImage = styled(Money)`
 `
 
 export const Card = styled.TouchableOpacity`
-    margin: 0 0 16px 16px;
+    margin: 5px 0 16px 16px;
     padding: 16px;
     background-color: #FFFFFF;
     border-radius: 16px;

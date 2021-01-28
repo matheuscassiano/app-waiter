@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { StatusBar } from 'expo-status-bar'
-import { Text, View } from 'react-native'
+import { Image, Text, View } from 'react-native'
 
 import { 
     PageTitle, ArrowBack, More, MoreModal, MoreModalItem, Price, 
@@ -13,6 +13,7 @@ import {
 
 import ArrowLeft from '../../assets/arrow-left.svg'
 import MoreIcon from '../../assets/more.svg'
+import MasterCard from '../../assets/matercard.png'
 
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler'
 import { Button, MidButton } from '../../components/Button'
@@ -87,10 +88,10 @@ export default function Payment({ navigation }) {
                                 <ScrollView 
                                 horizontal={true}
                                 showsHorizontalScrollIndicator={false}>
-                                    <Card><MoneyImage /></Card>
-                                    <Card><CreditImage /></Card>
-                                    <Card><DebitImage /></Card>
-                                    <Card><PixImage /></Card>
+                                    <Card><Image source={MasterCard} /></Card>
+                                    <Card><Image source={MasterCard} /></Card>
+                                    <Card><Image source={MasterCard} /></Card>
+                                    <Card><Image source={MasterCard} /></Card>
                                 </ScrollView>
                                 <PaymentInputContainer>
                                     <InputField placeholder="Valor pago no cartão" keyboarType="numeric" />
