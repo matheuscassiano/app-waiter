@@ -25,12 +25,15 @@ import {
   Modal, ModalInfo, ModalDetail, ModalTag, 
   ModalFooter, ModalTitle, ModalFooterText,
   ModalFooterButton } from '../../components/Modal';
+import NumberInput from '../../components/NumberInput';
 
 export default function App({ navigation }) {
   const [activeModalItem, setActiveModalItem] = useState(false)
   const [activeModalOrder, setActiveModalOrder] = useState(false)
   const [activePopup, setActivePopup] = useState(true)
   const [checkBoxActive, setCheckBoxActive] = useState(false)
+
+  const [quantity, setQuantity] = useState(0)
 
   return (
     <>
@@ -268,7 +271,7 @@ export default function App({ navigation }) {
           </ItemCard>
         </ScrollView>
         <ModalFooter>
-          <Text></Text>
+          <NumberInput number={quantity} setNumber={setQuantity} />
           <ModalFooterText>Adicionar</ModalFooterText>
           <ModalFooterText>R$ 10.00</ModalFooterText>
         </ModalFooter>
