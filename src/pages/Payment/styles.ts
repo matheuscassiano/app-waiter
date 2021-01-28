@@ -4,9 +4,12 @@ import { InputField } from '../../styles/global'
 import { Dimensions } from 'react-native'
 
 const windowWidth = Dimensions.get('window').width;
-import Money from '../../assets/money.svg'
-
 const StatusHeight = StatusBar.currentHeight as number
+
+import Money from '../../assets/money.svg'
+import Credit from '../../assets/credit.svg'
+import Debit from '../../assets/debit.svg'
+import Pix from '../../assets/pix.svg'
 
 export const Background = styled.View`
     height: 100%;
@@ -46,15 +49,15 @@ export const MoneyImage = styled(Money)`
     opacity: ${props => props.active === "money" || props.active === "All" ? 1 : .7};
 `
 
-export const CreditImage = styled(Money)`
+export const CreditImage = styled(Credit)`
     opacity: ${props => props.active === "credit" || props.active === "All" ? 1 : .7};
 `
 
-export const DebitImage = styled(Money)`
+export const DebitImage = styled(Debit)`
     opacity: ${props => props.active === "debit" || props.active === "All" ? 1 : .7};
 `
 
-export const PixImage = styled(Money)`
+export const PixImage = styled(Pix)`
     opacity: ${props => props.active === "pix" || props.active === "All" ? 1 : .7};
 `
 
@@ -72,7 +75,6 @@ export const Item = styled.View`
     align-items: center;
     justify-content: center;
 `
-
 
 export const PaymentInputContainer = styled.View`
     width: ${windowWidth - 64}px;

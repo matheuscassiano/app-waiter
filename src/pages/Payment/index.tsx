@@ -63,25 +63,25 @@ export default function Payment({ navigation }) {
                             <Card onPress={() => setSelected('credit')}>
                                 <CreditImage active={selected} />
                             </Card>
-                            <Text>Dinheiro</Text>
+                            <Text>Credito</Text>
                         </Item>
                         <Item>
                             <Card onPress={() => setSelected('debit')}>
                                 <DebitImage active={selected} />
                             </Card>
-                            <Text>Dinheiro</Text>
+                            <Text>Debito</Text>
                         </Item>
                         <Item>
                             <Card onPress={() => setSelected('pix')}>
                                 <PixImage active={selected} />
                             </Card>
-                            <Text>Dinheiro</Text>
+                            <Text>PIX</Text>
                         </Item>
                     </ScrollView>
                     <View>
                         {selected === 'money' ? (
                             <PaymentInputContainer>
-                                <InputField placeholder="Valor pago em dinheiro" keyboarType="numeric" />
+                                <InputField placeholder="Valor pago em dinheiro" keyboardType="numeric" />
                                 <Button color="#08AF24" >Pagar</Button>
                             </PaymentInputContainer>
                         ): selected === 'credit' ? (
@@ -95,7 +95,7 @@ export default function Payment({ navigation }) {
                                     <Card><Image source={MasterCard} /></Card>
                                 </ScrollView>
                                 <PaymentInputContainer>
-                                    <InputField placeholder="Valor pago no cartão" keyboarType="numeric" />
+                                    <InputField placeholder="Valor pago no cartão" keyboardType="numeric" />
                                     <Button color="#08AF24" >Pagar</Button>
                                 </PaymentInputContainer>
                             </>
@@ -110,7 +110,7 @@ export default function Payment({ navigation }) {
                                     <Card><Image source={MasterCard} /></Card>
                                 </ScrollView>
                                 <PaymentInputContainer>
-                                    <InputField placeholder="Valor pago no cartão" keyboarType="numeric" />
+                                    <InputField placeholder="Valor pago no cartão" keyboardType="numeric" />
                                     <Button color="#08AF24" >Pagar</Button>
                                 </PaymentInputContainer>
                             </>
@@ -118,7 +118,7 @@ export default function Payment({ navigation }) {
                             <>
                                 <PaymentInputContainer>
                                     <Image source={QRCode} />
-                                    <InputField placeholder="Valor pago no PIX" keyboarType="numeric" />
+                                    <InputField placeholder="Valor pago no PIX" keyboardType="numeric" />
                                     <Button color="#08AF24" >Pagar</Button>
                                 </PaymentInputContainer>
                             </>
