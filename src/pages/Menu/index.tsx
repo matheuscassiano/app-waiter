@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState, useRef } from 'react';
-import { Text, View, Image } from 'react-native';
-import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
+import { Text, View, TouchableOpacity } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 
 import { 
   PageTitle, Price, LineBreak, MinPrice, MinSubPrice,
@@ -274,6 +274,9 @@ export default function App({ navigation }) {
           <NumberInput number={quantity} setNumber={setQuantity} />
           <ModalFooterText>Adicionar</ModalFooterText>
           <ModalFooterText>R$ 10.00</ModalFooterText>
+          <TouchableOpacity onPress={() => console.log('Order')}>
+            <Text>jfshbgj</Text>
+          </TouchableOpacity>
         </ModalFooter>
       </Modal>
       <Modal active={activeModalOrder} setActive={setActiveModalOrder} title="Seus pedidos">
@@ -308,7 +311,10 @@ export default function App({ navigation }) {
             <ModalFooterText>Total</ModalFooterText>
             <ModalFooterText>R$ 100.00</ModalFooterText>
           </View>
-          <TouchableOpacity onPress={() => navigation.navigate('Order')}>
+          <TouchableOpacity onPress={() => { 
+            navigation.navigate('Order') 
+            setActiveModalOrder(false) 
+          }}>
             <ModalFooterButton>Enviar pedido</ModalFooterButton>
           </TouchableOpacity>
         </ModalFooter>
