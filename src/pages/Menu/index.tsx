@@ -274,9 +274,6 @@ export default function App({ navigation }) {
           <NumberInput number={quantity} setNumber={setQuantity} />
           <ModalFooterText>Adicionar</ModalFooterText>
           <ModalFooterText>R$ 10.00</ModalFooterText>
-          <TouchableOpacity onPress={() => console.log('Order')}>
-            <Text>jfshbgj</Text>
-          </TouchableOpacity>
         </ModalFooter>
       </Modal>
       <Modal active={activeModalOrder} setActive={setActiveModalOrder} title="Seus pedidos">
