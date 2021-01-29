@@ -14,11 +14,12 @@ export const OrderBackground = styled(Background)`
 
 export const MenuScroll = styled.ScrollView`
     height: 64px;
+    margin-left: 64px;
+    padding-right: 32px;
 `
 
 export const TabsTop = styled.View`
-    width: ${windowWidth - 64}px;
-    padding-left: 32px;
+    width: 100%;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -39,7 +40,6 @@ export const TabItem = styled.Text`
 export const OrderContainer = styled.ScrollView`
     width: 100%;
     height: 100%;
-    /* flex: 1; */
 `
 
 export const OrderCard = styled(Card)`
