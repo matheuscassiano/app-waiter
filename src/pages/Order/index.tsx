@@ -38,7 +38,7 @@ export default function App({ navigation }) {
                         <Content>
                         <RoundedImage source={Beer} />
                         <View>
-                            <ItemTitle>Skol - Cerveja Skol Pilsen</ItemTitle>
+                            <ItemTitle>Skol - Cerveja Skol Pilsenkol - Cerveja Skol Pilsen </ItemTitle>
                             <ListItem>+ Item 01</ListItem>
                             <ListItem>+ Item 01</ListItem>
                         </View>

@@ -285,7 +285,6 @@ export default function App({ navigation }) {
                 <ItemTitle>Skol - Cerveja Skol Pilsen</ItemTitle>
                 <ListItem>+ Item 01</ListItem>
                 <ListItem>+ Item 01</ListItem>
-                <ListItem>+ Item 01</ListItem>
               </View>
             </Content>
             <Price>R$ 9.00</Price>
@@ -296,8 +295,6 @@ export default function App({ navigation }) {
               <RoundedImage source={Beer} />
               <View>
                 <ItemTitle>Skol - Cerveja Skol Pilsen</ItemTitle>
-                <ListItem>+ Item 01</ListItem>
-                <ListItem>+ Item 01</ListItem>
                 <ListItem>+ Item 01</ListItem>
                 <ListItem>+ Item 01</ListItem>
               </View>

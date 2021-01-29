@@ -32,10 +32,10 @@ export const StarContainer = styled.View`
 export const Content = styled.ScrollView`
     width: 100%;
     elevation: 10;
-    padding: 16px 32px;
+    padding: 16px 40px;
     background-color: white;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 `
 
@@ -48,4 +48,8 @@ export const ContentTitle = styled.Text`
 
 export const InputGroup = styled.View`
     margin-bottom: 10px;
+`
+
+export const Logout = styled.Text`
+    color: white;
 `

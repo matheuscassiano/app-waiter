@@ -118,6 +118,7 @@ export default function Payment({ navigation }) {
                             <>
                                 <PaymentInputContainer>
                                     <Image source={QRCode} />
+                                    <Text>HK5J4HJ4H5KJ4HK5J4HK5J4HK</Text>
                                     <InputField placeholder="Valor pago no PIX" keyboardType="numeric" />
                                     <Button color="#08AF24" >Pagar</Button>
                                 </PaymentInputContainer>

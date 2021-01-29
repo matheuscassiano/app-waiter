@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 
 export const Item = styled.TouchableOpacity`
     width: 100%;
-    display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -12,6 +12,7 @@ export const Item = styled.TouchableOpacity`
 `
 
 export const Content = styled.View`
+    max-width: 50%;
     flex-direction: row;
     align-items: center;
 `
@@ -29,4 +30,5 @@ export const RoundedImage = styled.Image`
 export const ItemTitle = styled.Text`
     font-size: 15px;
     font-weight: 700;
+    padding-right: 20px;
 `
