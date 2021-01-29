@@ -49,3 +49,7 @@ export const ContentTitle = styled.Text`
 export const InputGroup = styled.View`
     margin-bottom: 10px;
 `
+
+export const Logout = styled.Text`
+    color: white;
+`

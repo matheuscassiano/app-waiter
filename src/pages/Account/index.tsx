@@ -3,13 +3,13 @@ import { StatusBar } from 'expo-status-bar'
 
 import { 
     Background, Avatar, Name, StarContainer, 
-    Content, ContentTitle, InputGroup } from './styles'
+    Content, ContentTitle, InputGroup, Logout } from './styles'
 
 import AvatarImage from '../../assets/avatar.png'
 import Star from '../../assets/star.svg'
 import { Text } from 'react-native'
 import { MidButton } from '../../components/Button'
-import { InputField, Title, Card, ButtonContainer } from '../../styles/global'
+import { InputField, Title, Card, ButtonContainer, More } from '../../styles/global'
 
 export default function App({ navigation }) {
     return (
@@ -47,6 +47,9 @@ export default function App({ navigation }) {
                     <MidButton color="#CE6F64" onPress={() => console.log('oi')}>Cancelar</MidButton>
                 </ButtonContainer>
             </Content>
+            <More>
+                <Logout>Logout</Logout>
+            </More>
             <StatusBar style="light" />
         </Background>
     )
