@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
-import React, { useState } from 'react';
-import { Text, View, Image } from 'react-native';
-import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
+import React, { useState, useRef } from 'react';
+import { Text, View, TouchableOpacity } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 
 import { 
   PageTitle, Price, LineBreak, MinPrice, MinSubPrice,
@@ -117,7 +117,7 @@ export default function App({ navigation }) {
           <LineBreak />
           <SubTitle>Cervejas</SubTitle>
           <View>
-          <ItemCard onPress={() => setActiveModalItem(true)}>
+          <ItemCard onPress={() => setActiveModalItem(true) }>
             <Content>
               <RoundedImage source={Beer} />
               <View>
@@ -308,7 +308,10 @@ export default function App({ navigation }) {
             <ModalFooterText>Total</ModalFooterText>
             <ModalFooterText>R$ 100.00</ModalFooterText>
           </View>
-          <TouchableOpacity onPress={() => navigation.navigate('Order')}>
+          <TouchableOpacity onPress={() => { 
+            navigation.navigate('Order') 
+            setActiveModalOrder(false) 
+          }}>
             <ModalFooterButton>Enviar pedido</ModalFooterButton>
           </TouchableOpacity>
         </ModalFooter>
