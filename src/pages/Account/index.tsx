@@ -14,7 +14,7 @@ import { InputField, Title, Card, ButtonContainer, More } from '../../styles/glo
 export default function App({ navigation }) {
     return (
         <Background>
-            <Title>Perfil</Title>
+            <Title>Meu Perfil</Title>
             <Card>
                 <Avatar source={AvatarImage} />
                 <Name>Carlos Barbosa da Silva</Name>

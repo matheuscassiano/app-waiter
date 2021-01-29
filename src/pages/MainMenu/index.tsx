@@ -39,7 +39,7 @@ export default function App({ navigation }) {
         </MenuButton>
         <MenuButton onPress={() => navigation.push('Account')}>
           <Icon source={ AccountIcon } />
-          <Text>Conta</Text>
+          <Text>Meu Perfil</Text>
         </MenuButton>
       </MenuContainer>
       <StatusBar style="dark" />
