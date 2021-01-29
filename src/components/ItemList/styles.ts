@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 
 export const Item = styled.TouchableOpacity`
-    max-width: 100%;
+    width: 100%;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
@@ -12,7 +12,7 @@ export const Item = styled.TouchableOpacity`
 `
 
 export const Content = styled.View`
-    max-width: 60%;
+    max-width: 50%;
     flex-direction: row;
     align-items: center;
 `
