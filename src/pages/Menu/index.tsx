@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Text, View, Image } from 'react-native';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 
@@ -117,7 +117,7 @@ export default function App({ navigation }) {
           <LineBreak />
           <SubTitle>Cervejas</SubTitle>
           <View>
-          <ItemCard onPress={() => setActiveModalItem(true)}>
+          <ItemCard onPress={() => setActiveModalItem(true) }>
             <Content>
               <RoundedImage source={Beer} />
               <View>
