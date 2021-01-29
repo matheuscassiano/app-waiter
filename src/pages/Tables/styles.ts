@@ -26,15 +26,13 @@ export const TableContainer = styled.View`
 
 export const Item = styled.TouchableOpacity`
     margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
 `
 
 export const ItemNumber = styled.Text`
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    line-height: 95px;
     color: white;
-    font-weight: 700;
     font-size: 25px;
+    font-weight: 700;
     position: absolute;
 `
